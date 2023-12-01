@@ -1,8 +1,9 @@
 function GithubIcon({
   width = 40,
   height = 40,
-  mainColor = "#ddbaff",
-  secondColor = "#2100c4",
+  mainColor = "#fff",
+  secondColor = "#6e5494",
+  className,
 }) {
   return (
     <svg
@@ -10,6 +11,7 @@ function GithubIcon({
       viewBox="0 0 48 48"
       width={width}
       height={height}
+      className={className}
     >
       <path
         fill={secondColor}
