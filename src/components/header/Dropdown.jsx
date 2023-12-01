@@ -7,19 +7,19 @@ function Dropdown() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-  const closeMenu = () => {
-    // Define el ancho límite para cerrar el menú (ajústalo según tus necesidades)
-    const limitWidth = 648
 
-    if (windowW <= limitWidth && isOpen) {
-      setIsOpen(false)
-    }
-  }
   useEffect(() => {
     const updateWindowWidth = () => {
       setWindowW(window.innerWidth)
     }
+    const closeMenu = () => {
+      // Define el ancho límite para cerrar el menú (ajústalo según tus necesidades)
+      const limitWidth = 640
 
+      if (windowW <= limitWidth && isOpen) {
+        setIsOpen(false)
+      }
+    }
     const handleResize = () => {
       updateWindowWidth()
       closeMenu()
