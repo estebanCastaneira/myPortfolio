@@ -1,24 +1,38 @@
-import Linkedin from "../assets/icons/Linkedin"
+import LinkedinIcon from "../assets/icons/LinkedinIcon"
+import GithubIcon from "../assets/icons/GithubIcon"
 function Header() {
   return (
-    <header className="bg-zinc-800 py-9">
-      <div className="min-w-[85%] flex justify-around m-2">
-        <div className="flex flex-col items-start justify-center gap-2">
+    <header className="bg-zinc-800 py-5">
+      <div className="w-[85%] flex justify-between my-0 mx-auto">
+        <div className="flex flex-col items-start justify-center">
           <p className="font-bold">
-            Esteban Castañeira{" "}
+            Esteban Castañeira
             <span className="text-blue-200 font-thin block sm:inline-block">
               Full Stack Developer
             </span>
           </p>
-          <a href="https://www.linkedin.com/in/estebancastaneira/">
-            <Linkedin width={25} height={25} color="#27272a" />
-          </a>
+          <div className="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/estebancastaneira/">
+              <LinkedinIcon width={25} height={25} />
+            </a>
+            <a href="https://github.com/estebanCastaneira">
+              <GithubIcon width={30} height={30} />
+            </a>
+          </div>
         </div>
-        <div className="flex gap-9">
-          <a href="#">About</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Contact</a>
-        </div>
+        <nav>
+          <ul className="sm:flex hidden gap-9 ">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   )

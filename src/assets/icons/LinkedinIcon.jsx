@@ -1,4 +1,4 @@
-function Linkedin({ width = 40, height = 40, color = "#fff" }) {
+function LinkedinIcon({ width = 40, height = 40, color = "#fff" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,4 @@ function Linkedin({ width = 40, height = 40, color = "#fff" }) {
   )
 }
 
-export default Linkedin
+export default LinkedinIcon

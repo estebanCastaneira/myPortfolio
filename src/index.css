@@ -9,6 +9,9 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+input,
+label,
+legend {
   font-family: Breez Sans, sans-serif;
 }
