@@ -2,14 +2,35 @@ import { useEffect, useState } from "react"
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false)
+  const [windowW, setWindowW] = useState(window.innerWidth)
 
-  const handleOnClick = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+  const closeMenu = () => {
+    // Define el ancho límite para cerrar el menú (ajústalo según tus necesidades)
+    const limitWidth = 648
+
+    if (windowW <= limitWidth && isOpen) {
+      setIsOpen(false)
+    }
+  }
   useEffect(() => {
-    const screenW = window.visualViewport.width
-    screenW > 647 && setIsOpen(false)
-  }, [])
+    const updateWindowWidth = () => {
+      setWindowW(window.innerWidth)
+    }
+
+    const handleResize = () => {
+      updateWindowWidth()
+      closeMenu()
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [windowW, isOpen])
   return (
     <div className="relative flex flex-col items-center">
       <button
@@ -20,7 +41,7 @@ function Dropdown() {
         aria-controls="navbarSupportedContent1"
         aria-expanded="false"
         aria-label="Toggle navigation"
-        onClick={handleOnClick}
+        onClick={toggleMenu}
       >
         <span className="[&>svg]:w-7">
           <svg
