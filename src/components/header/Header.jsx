@@ -8,15 +8,15 @@ function Header() {
       <nav>
         <div className="w-[80%] my-0 mx-auto flex justify-between items-center sm:items-start ">
           <div className="flex flex-col items-start justify-center">
-            <p className="font-bold mr-10">
+            <h2 className="font-bold mr-10">
               Esteban Castañeira
               <span
-                className="sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer"
+                className="sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest neon"
                 style={neonText("#008fff")}
               >
-                Full Stack Developer
+                Full Stack Devel<span className="delay">o</span>per
               </span>
-            </p>
+            </h2>
             <div className="flex items-center gap-4">
               <a
                 href="https://www.linkedin.com/in/estebancastaneira/"
@@ -38,14 +38,20 @@ function Header() {
           </div>
           <div>
             <ul className="sm:flex hidden gap-9 ">
-              <li className="hover:scale-90 transform transition">
-                <a href="#">About</a>
+              <li className="hover:scale-90 transform transition ">
+                <a className="tracking-widest neon" href="#">
+                  About
+                </a>
               </li>
               <li className="hover:scale-90 transform transition">
-                <a href="#">Portfolio</a>
+                <a className="tracking-widest neon" href="#">
+                  Portfolio
+                </a>
               </li>
               <li className="hover:scale-90 transform transition">
-                <a href="#">Contact</a>
+                <a className="tracking-widest neon" href="#">
+                  Contact
+                </a>
               </li>
             </ul>
             <Dropdown />
