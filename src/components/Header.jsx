@@ -30,7 +30,7 @@ function Header() {
               rel="noreferrer noopener"
               className="inline-flex transform transition-transform hover:scale-125"
             >
-              <GithubIcon width={30} height={30} className="hover:scale-110" />
+              <GithubIcon width={30} height={30} />
             </a>
           </div>
         </div>

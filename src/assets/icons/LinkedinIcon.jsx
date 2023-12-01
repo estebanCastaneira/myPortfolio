@@ -4,7 +4,6 @@ function LinkedinIcon({
   mainColor = "#fff",
   secondColor = "#000",
   thirdColor = "#8bb7f0",
-  className,
 }) {
   return (
     <svg
@@ -12,7 +11,6 @@ function LinkedinIcon({
       viewBox="0 0 40 40"
       width={width}
       height={height}
-      className={className}
     >
       <path fill={secondColor} d="M2.5 2.5H37.5V37.5H2.5z" />
       <path fill={thirdColor} d="M37,3v34H3V3H37 M38,2H2v36h36V2L38,2z" />
