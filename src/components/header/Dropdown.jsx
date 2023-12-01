@@ -13,7 +13,6 @@ function Dropdown() {
       setWindowW(window.innerWidth)
     }
     const closeMenu = () => {
-      // Define el ancho límite para cerrar el menú (ajústalo según tus necesidades)
       const limitWidth = 640
 
       if (windowW <= limitWidth && isOpen) {
