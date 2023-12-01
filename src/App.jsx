@@ -8,9 +8,6 @@ function App() {
           <h1 className="">va pa e</h1>
         </div>
       </div>
-      <div className=" h-96 bg-zinc-800 ">
-        <h2 className="">Prueba</h2>
-      </div>
     </>
   )
 }

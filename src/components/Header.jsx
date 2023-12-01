@@ -7,10 +7,10 @@ function Header() {
       <nav>
         <div className="w-[85%] my-0 mx-auto flex justify-between items-center sm:items-start ">
           <div className="flex flex-col items-start justify-center">
-            <p className="font-bold">
-              Esteban Castañeira{" "}
+            <p className="font-bold mr-10">
+              Esteban Castañeira
               <span
-                className="text-blue-200 font-thin block sm:inline-block transform transition hover:scale-110 hover:cursor-pointer"
+                className="sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer"
                 style={neonText("#008fff")}
               >
                 Full Stack Developer
@@ -50,7 +50,7 @@ function Header() {
           </div>
           {/* Hamburger Icon */}
           <button
-            className="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
+            className="block border-0 bg-transparent px-2 text-white focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
             type="button"
             data-te-collapse-init
             data-te-target="#navbarSupportedContent1"
@@ -66,9 +66,9 @@ function Header() {
                 className="h-7 w-7"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </span>
