@@ -2,17 +2,20 @@ import Dropdown from "./Dropdown"
 import LinkedinIcon from "../../assets/icons/LinkedinIcon"
 import GithubIcon from "../../assets/icons/GithubIcon"
 import neonText from "../../functions/neonText"
+import scrollToSection from "../../functions/scrollToSection"
+
 function Header() {
   return (
     <header className="bg-zinc-800 py-4 sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-10">
       <nav>
         <div className="w-[80%] my-0 mx-auto flex justify-between items-center sm:items-start ">
           <div className="flex flex-col items-start justify-center">
-            <h2 className="font-bold mr-10">
+            <h2 className="font-bold mr-10 text-lg">
               Esteban Castañeira
               <span
                 className="sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest neon"
                 style={neonText("#008fff")}
+                onClick={() => scrollToSection("hero")}
               >
                 Full Stack Devel<span className="delay">o</span>per
               </span>
@@ -39,19 +42,28 @@ function Header() {
           <div>
             <ul className="sm:flex hidden gap-9 ">
               <li className="hover:scale-90 transform transition ">
-                <a className="tracking-widest neon" href="#">
+                <button
+                  className="tracking-widest neon"
+                  onClick={() => scrollToSection("about")}
+                >
                   About
-                </a>
+                </button>
               </li>
               <li className="hover:scale-90 transform transition">
-                <a className="tracking-widest neon" href="#">
+                <button
+                  className="tracking-widest neon"
+                  onClick={() => scrollToSection("portfolio")}
+                >
                   Portfolio
-                </a>
+                </button>
               </li>
               <li className="hover:scale-90 transform transition">
-                <a className="tracking-widest neon" href="#">
+                <button
+                  className="tracking-widest neon"
+                  onClick={() => scrollToSection("contact")}
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
             <Dropdown />

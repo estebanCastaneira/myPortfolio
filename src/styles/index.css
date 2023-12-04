@@ -12,7 +12,8 @@ p,
 a,
 input,
 label,
-legend {
+legend,
+button {
   font-family: Brezze Sans, sans-serif;
   color: white;
 }

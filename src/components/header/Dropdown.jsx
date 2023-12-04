@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import scrollToSection from "../../functions/scrollToSection"
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false)
   const [windowW, setWindowW] = useState(window.innerWidth)
@@ -61,13 +61,17 @@ function Dropdown() {
         <div className="bg-zinc-800 bg-opacity-20 absolute top-20 rounded-lg border border-zinc-700 p-3">
           <ul className="flex flex-col items-center gap-6 ">
             <li className="flex justify-center hover:brightness-105 px-4 py-1 w-full">
-              <a href="#">About</a>
+              <button onClick={() => scrollToSection("about")}>About</button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
-              <a href="#">Portfolio</a>
+              <button onClick={() => scrollToSection("portfolio")}>
+                Portfolio
+              </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
-              <a href="#">Contact</a>
+              <button onClick={() => scrollToSection("contact")}>
+                Contact
+              </button>
             </li>
           </ul>
         </div>
