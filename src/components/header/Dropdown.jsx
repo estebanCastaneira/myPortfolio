@@ -65,7 +65,7 @@ function Dropdown({ activeSection }) {
                 className={`neon ${activeSection === "about" && "neonText"}`}
                 onClick={() => scrollToSection("about")}
               >
-                About
+                Abo<span className="delay">u</span>t
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
@@ -75,7 +75,7 @@ function Dropdown({ activeSection }) {
                 }`}
                 onClick={() => scrollToSection("portfolio")}
               >
-                Portfolio
+                Portfo<span className="delay">l</span>io
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
@@ -83,7 +83,7 @@ function Dropdown({ activeSection }) {
                 className={`neon ${activeSection === "contact" && "neonText"}`}
                 onClick={() => scrollToSection("contact")}
               >
-                Contact
+                Conta<span className="delay">c</span>t
               </button>
             </li>
           </ul>
