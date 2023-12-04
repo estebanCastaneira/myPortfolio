@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import scrollToSection from "../../functions/scrollToSection"
 function Dropdown({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false)
   const [windowW, setWindowW] = useState(window.innerWidth)
-
+  const dropdownRef = useRef(null)
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -23,17 +23,27 @@ function Dropdown({ activeSection }) {
       updateWindowWidth()
       closeMenu()
     }
-
+    const closeDropdown = (event) => {
+      if (
+        isOpen &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener("click", closeDropdown)
     window.addEventListener("resize", handleResize)
 
     return () => {
       window.removeEventListener("resize", handleResize)
+      document.removeEventListener("click", closeDropdown)
     }
   }, [windowW, isOpen])
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center" ref={dropdownRef}>
       <button
-        className="block border-transparent active:border-white duration-300 bg-transparent p-2 text-white focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
+        className="block active:border-white focus:border-white target:border-white duration-300 bg-transparent p-2 text-white  focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
         type="button"
         data-te-collapse-init
         data-te-target="#navbarSupportedContent1"
@@ -58,7 +68,7 @@ function Dropdown({ activeSection }) {
         </span>
       </button>
       {isOpen && (
-        <div className="bg-zinc-800 bg-opacity-20 absolute top-20 rounded-lg border border-zinc-700 p-3">
+        <div className="bg-zinc-800 bg-opacity-30 absolute top-12 rounded-lg border border-zinc-700 p-3 mr-4">
           <ul className="flex flex-col items-center gap-6 ">
             <li className="flex justify-center hover:brightness-105 px-4 py-1 w-full">
               <button

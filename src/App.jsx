@@ -5,7 +5,7 @@ import About from "./components/about/About"
 import Portfolio from "./components/portfolio/Portfolio"
 import Contact from "./components/contact/Contact"
 function App() {
-  const [activeSection, setActiveSection] = useState(null)
+  const [activeSection, setActiveSection] = useState("hero")
 
   useEffect(() => {
     const handleScroll = () => {
