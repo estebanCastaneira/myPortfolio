@@ -75,7 +75,7 @@ function Header({ activeSection }) {
                 </button>
               </li>
             </ul>
-            <Dropdown />
+            <Dropdown activeSection={activeSection} />
           </div>
         </div>
       </nav>
