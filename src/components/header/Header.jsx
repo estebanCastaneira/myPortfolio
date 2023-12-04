@@ -1,10 +1,12 @@
 import Dropdown from "./Dropdown"
 import LinkedinIcon from "../../assets/icons/LinkedinIcon"
 import GithubIcon from "../../assets/icons/GithubIcon"
-import neonText from "../../functions/neonText"
 import scrollToSection from "../../functions/scrollToSection"
 
-function Header() {
+function Header({ activeSection }) {
+  const handleOnClik = (section) => {
+    scrollToSection(section)
+  }
   return (
     <header className="bg-zinc-800 py-4 sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-10">
       <nav>
@@ -13,9 +15,10 @@ function Header() {
             <h2 className="font-bold mr-10 text-lg">
               Esteban Castañeira
               <span
-                className="sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest neon"
-                style={neonText("#008fff")}
-                onClick={() => scrollToSection("hero")}
+                className={`sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest neon ${
+                  activeSection === "hero" && "neonText"
+                }`}
+                onClick={() => handleOnClik("hero")}
               >
                 Full Stack Devel<span className="delay">o</span>per
               </span>
@@ -43,26 +46,32 @@ function Header() {
             <ul className="sm:flex hidden gap-9 ">
               <li className="hover:scale-90 transform transition ">
                 <button
-                  className="tracking-widest neon"
-                  onClick={() => scrollToSection("about")}
+                  className={`tracking-widest neon ${
+                    activeSection === "about" && "neonText"
+                  }`}
+                  onClick={() => handleOnClik("about")}
                 >
-                  About
+                  Abo<span className="delay">u</span>t
                 </button>
               </li>
               <li className="hover:scale-90 transform transition">
                 <button
-                  className="tracking-widest neon"
-                  onClick={() => scrollToSection("portfolio")}
+                  className={`tracking-widest neon ${
+                    activeSection === "portfolio" && "neonText"
+                  }`}
+                  onClick={() => handleOnClik("portfolio")}
                 >
-                  Portfolio
+                  Portfo<span className="delay">l</span>io
                 </button>
               </li>
               <li className="hover:scale-90 transform transition">
                 <button
-                  className="tracking-widest neon"
-                  onClick={() => scrollToSection("contact")}
+                  className={`tracking-widest neon ${
+                    activeSection === "contact" && "neonText"
+                  }`}
+                  onClick={() => handleOnClik("contact")}
                 >
-                  Contact
+                  Conta<span className="delay">c</span>t
                 </button>
               </li>
             </ul>

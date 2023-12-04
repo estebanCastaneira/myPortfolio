@@ -28,9 +28,17 @@
     opacity: 1;
   }
 }
-.neon span {
-  animation: flicker 8s ease-in-out infinite;
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #008fff, 0 0 42px #008fff,
+    0 0 82px #008fff, 0 0 92px #008fff, 0 0 102px #008fff, 0 0 151px #008fff;
 }
-.neon .delay {
+.neonText span {
+  animation: flicker 7s ease-in-out infinite;
+}
+.neonText .delay {
   animation-delay: 0.8s;
+}
+.neon {
+  transition: all 0.3s ease;
 }
