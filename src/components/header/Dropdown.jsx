@@ -62,26 +62,39 @@ function Dropdown({ activeSection }) {
           <ul className="flex flex-col items-center gap-6 ">
             <li className="flex justify-center hover:brightness-105 px-4 py-1 w-full">
               <button
-                className={`neon ${activeSection === "about" && "neonText"}`}
-                onClick={() => scrollToSection("about")}
+                className={`neon tracking-widest ${
+                  activeSection === "about" && "neonText"
+                }`}
+                onClick={() => {
+                  scrollToSection("about")
+                  setIsOpen(false)
+                }}
               >
                 Abo<span className="delay">u</span>t
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
               <button
-                className={`neon ${
+                className={`neon tracking-widest ${
                   activeSection === "portfolio" && "neonText"
                 }`}
-                onClick={() => scrollToSection("portfolio")}
+                onClick={() => {
+                  scrollToSection("portfolio")
+                  setIsOpen(false)
+                }}
               >
                 Portfo<span className="delay">l</span>io
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
               <button
-                className={`neon ${activeSection === "contact" && "neonText"}`}
-                onClick={() => scrollToSection("contact")}
+                className={`neon tracking-widest ${
+                  activeSection === "contact" && "neonText"
+                }`}
+                onClick={() => {
+                  scrollToSection("contact")
+                  setIsOpen(false)
+                }}
               >
                 Conta<span className="delay">c</span>t
               </button>
