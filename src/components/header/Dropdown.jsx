@@ -4,6 +4,7 @@ function Dropdown({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false)
   const [windowW, setWindowW] = useState(window.innerWidth)
   const dropdownRef = useRef(null)
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
