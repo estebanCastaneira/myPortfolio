@@ -44,11 +44,13 @@ function App() {
     <>
       <div className="bg-zinc-900 min-h-screen">
         <Header activeSection={activeSection} />
-        <main className="w-[80%] mx-auto">
+        <main className="">
           <Hero />
-          <About />
-          <Portfolio />
-          <Contact />
+          <div className="w-[80%] mx-auto">
+            <About />
+            <Portfolio />
+            <Contact />
+          </div>
         </main>
       </div>
     </>

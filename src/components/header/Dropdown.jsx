@@ -80,7 +80,7 @@ function Dropdown({ activeSection }) {
                   setIsOpen(false)
                 }}
               >
-                Abo<span className="delay">u</span>t
+                Abo<span className="flicker">u</span>t
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
@@ -93,7 +93,7 @@ function Dropdown({ activeSection }) {
                   setIsOpen(false)
                 }}
               >
-                Portfo<span className="delay">l</span>io
+                Portfo<span className="flicker">l</span>io
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
@@ -106,7 +106,7 @@ function Dropdown({ activeSection }) {
                   setIsOpen(false)
                 }}
               >
-                Conta<span className="delay">c</span>t
+                Conta<span className="flicker">c</span>t
               </button>
             </li>
           </ul>
