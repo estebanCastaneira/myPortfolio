@@ -3,17 +3,17 @@ import me from "/img/me.jpg"
 function About() {
   const sectionAbout = useRef(null)
   return (
-    <div id="about" ref={sectionAbout} className="py-32 sm:py-28">
-      <h2 className="neonText text-4xl text-center">
+    <div id="about" ref={sectionAbout} className="pt-32 sm:py-24">
+      <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         About <span className="flicker">M</span>e
       </h2>
-      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center my-20">
+      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-20">
         <div className="container-profile sm:w-[50%] ">
           <div className="profile w-[85%]">
             <img className="rounded-full" src={me} alt="" />
           </div>
         </div>
-        <div className="sm:w-[50%] sm:text-lg">
+        <div className="text-sm sm:w-[50%] sm:text-xl">
           <p>Hello, there! I'm Esteban.</p>
           <p>
             In 2020 the pandemic prompted me to reevaluate my career in

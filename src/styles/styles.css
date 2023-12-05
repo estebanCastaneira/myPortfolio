@@ -1,3 +1,4 @@
+/* Neon Text & Animations */
 @keyframes flicker {
   0% {
     opacity: 0;
@@ -61,6 +62,7 @@
 .neon {
   transition: all 0.3s ease;
 }
+/* About */
 .container-profile {
   perspective: 60rem;
   display: flex;
@@ -77,5 +79,6 @@
   rotate: y 10deg;
 }
 .container-profile:hover .profile img {
-  box-shadow: #008fff -20px 5px 20px;
+  box-shadow: #008fff -20px 5px 80px;
 }
+/* Portfolio */

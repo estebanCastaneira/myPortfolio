@@ -19,16 +19,17 @@ function App() {
       const rect3 = sectionPortfolio.getBoundingClientRect()
       const rect4 = sectionContact.getBoundingClientRect()
 
-      if (rect1.top <= 0 && rect1.bottom > 0) {
+      const offset = window.innerHeight * 0.4
+      if (rect1.top - offset <= 0 && rect1.bottom - offset > 0) {
         setActiveSection("hero")
       }
-      if (rect2.top <= 0 && rect2.bottom > 0) {
+      if (rect2.top - offset <= 0 && rect2.bottom - offset > 0) {
         setActiveSection("about")
       }
-      if (rect3.top <= 0 && rect3.bottom > 0) {
+      if (rect3.top - offset <= 0 && rect3.bottom - offset > 0) {
         setActiveSection("portfolio")
       }
-      if (rect4.top <= 0 && rect4.bottom > 0) {
+      if (rect4.top - offset <= 0 && rect4.bottom - offset > 0) {
         setActiveSection("contact")
       }
     }
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-zinc-900 min-h-screen">
+      <div className="bg-gradient-to-t from-zinc-800 to-violet-950">
         <Header activeSection={activeSection} />
         <main className="">
           <Hero />
