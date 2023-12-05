@@ -9,28 +9,15 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionHero = document.getElementById("hero")
-      const sectionAbout = document.getElementById("about")
-      const sectionPortfolio = document.getElementById("portfolio")
-      const sectionContact = document.getElementById("contact")
-
-      const rect1 = sectionHero.getBoundingClientRect()
-      const rect2 = sectionAbout.getBoundingClientRect()
-      const rect3 = sectionPortfolio.getBoundingClientRect()
-      const rect4 = sectionContact.getBoundingClientRect()
-
-      const offset = window.innerHeight * 0.4
-      if (rect1.top - offset <= 0 && rect1.bottom - offset > 0) {
-        setActiveSection("hero")
-      }
-      if (rect2.top - offset <= 0 && rect2.bottom - offset > 0) {
-        setActiveSection("about")
-      }
-      if (rect3.top - offset <= 0 && rect3.bottom - offset > 0) {
-        setActiveSection("portfolio")
-      }
-      if (rect4.top - offset <= 0 && rect4.bottom - offset > 0) {
-        setActiveSection("contact")
+      const sections = ["hero", "about", "portfolio", "contact"]
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId)
+        if (!section) continue
+        const rect = section.getBoundingClientRect()
+        const offset = window.innerHeight * 0.4
+        if (rect.top - offset <= 0 && rect.bottom - offset > 0) {
+          setActiveSection(section.id)
+        }
       }
     }
 
