@@ -7,5 +7,9 @@ get a really cool video mmmnah
 
 ABOUT
 
+PORTFOLIO
+card for each project
 
 CONTACT
+validations
+notifications
