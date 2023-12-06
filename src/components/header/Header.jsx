@@ -8,7 +8,7 @@ function Header({ activeSection }) {
     scrollToSection(section)
   }
   return (
-    <header className="bg-zinc-800 py-4 fixed top-0 backdrop-filter backdrop-blur-lg bg-opacity-30 z-10 w-full">
+    <header className="bg-zinc-800 py-4 fixed top-0 backdrop-filter backdrop-blur-lg bg-opacity-30 z-20 w-full">
       <nav>
         <div className="w-[80%] my-0 mx-auto flex justify-between items-center sm:items-start ">
           <div className="flex flex-col items-start justify-center">

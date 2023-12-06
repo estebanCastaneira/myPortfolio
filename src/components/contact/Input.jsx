@@ -1,4 +1,7 @@
-function Input({ label, type, placeholder }) {
+function Input({ label, type, placeholder, value, setValue }) {
+  const handleOnChange = (e) => {
+    setValue(e.target.value)
+  }
   return (
     <div className="flex flex-col w-full sm:w-[80%] gap-3">
       <label className="z-10">{label}</label>
@@ -6,6 +9,8 @@ function Input({ label, type, placeholder }) {
         className="p-3 rounded-xl bg-transparent border border-violet-900"
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={handleOnChange}
       />
     </div>
   )
