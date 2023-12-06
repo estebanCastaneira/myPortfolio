@@ -1,7 +1,10 @@
 import { useRef, useState } from "react"
+import sendEmail from "../../functions/sendEmail"
 import Input from "./Input"
+
 function Contact() {
   const sectionContact = useRef(null)
+  const form = useRef(null)
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -11,9 +14,15 @@ function Contact() {
   const handleOnChangeTextA = (event) => {
     setMessage(event.target.value)
   }
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(name, email, phone, message)
+    try {
+      const response = await sendEmail(form)
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -22,12 +31,13 @@ function Contact() {
         Conta<span className="flicker">c</span>t
       </h2>
       <div className="mt-24">
-        <form action="" onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <fieldset>
             <div className="flex flex-col justify-center items-center text-xl gap-8">
               <Input
                 label={"Name :"}
                 type={"text"}
+                name={"name"}
                 placeholder={"Your name..."}
                 value={name}
                 setValue={setName}
@@ -35,6 +45,7 @@ function Contact() {
               <Input
                 label={"E-Mail :"}
                 type={"email"}
+                name={"email"}
                 placeholder={"Your e-mail..."}
                 value={email}
                 setValue={setEmail}
@@ -42,6 +53,7 @@ function Contact() {
               <Input
                 label={"Phone :"}
                 type={"phone"}
+                name={"phone"}
                 placeholder={"Your phone...(optional)"}
                 value={phone}
                 setValue={setPhone}

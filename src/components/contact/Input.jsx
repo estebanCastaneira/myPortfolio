@@ -1,4 +1,4 @@
-function Input({ label, type, placeholder, value, setValue }) {
+function Input({ label, type, name, placeholder, value, setValue }) {
   const handleOnChange = (e) => {
     setValue(e.target.value)
   }
@@ -8,6 +8,7 @@ function Input({ label, type, placeholder, value, setValue }) {
       <input
         className="p-3 rounded-xl bg-transparent border border-violet-900"
         type={type}
+        name={name}
         placeholder={placeholder}
         value={value}
         onChange={handleOnChange}
