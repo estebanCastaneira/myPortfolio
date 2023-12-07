@@ -18,7 +18,7 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      const response = await sendEmail(form)
+      const response = await sendEmail(form, name, email, message)
       console.log(response)
     } catch (error) {
       console.log(error)
@@ -64,13 +64,13 @@ function Contact() {
                 <textarea
                   name="message"
                   placeholder="Leave your message..."
-                  className="p-3 rounded-xl w-full h-64 bg-transparent border border-violet-900"
+                  className="p-3 rounded-xl w-full h-64 bg-transparent border border-violet-900 focus:border-white"
                   value={message}
                   onChange={handleOnChangeTextA}
                 ></textarea>
               </div>
               <div className="my-5">
-                <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-900 hover:scale-110 transition-all rounded-xl">
+                <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-900 hover:scale-110 focus:border-white focus:scale-110 transition-all rounded-xl">
                   Send
                 </button>
               </div>

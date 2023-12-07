@@ -85,19 +85,25 @@
 
 /* Contact */
 
-input:focus,
+.input:focus,
 textarea:focus {
   outline: #4c1d95;
-  box-shadow: -10px -10px 80px 8px #4c1d95;
+  box-shadow: -10px -10px 70px 8px #4c1d95;
   background-color: black;
   transition: all;
   transition-duration: 700ms;
 }
-
+label {
+  margin-left: 0.25rem;
+}
 textarea {
   resize: none;
 }
 .send-button:hover {
   border: none;
+  box-shadow: -10px -10px 80px 8px #4c1d95;
+}
+.send-button:focus {
+  outline: none;
   box-shadow: -10px -10px 80px 8px #4c1d95;
 }
