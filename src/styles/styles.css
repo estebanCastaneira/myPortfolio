@@ -88,7 +88,16 @@
 .input:focus,
 textarea:focus {
   outline: #4c1d95;
+  border: none;
   box-shadow: -10px -10px 70px 8px #4c1d95;
+  background-color: black;
+  transition: all;
+  transition-duration: 700ms;
+}
+.wrong-email {
+  outline: #d81038;
+  border: none;
+  box-shadow: -10px -10px 70px 8px #ea1212;
   background-color: black;
   transition: all;
   transition-duration: 700ms;
@@ -105,5 +114,7 @@ textarea {
 }
 .send-button:focus {
   outline: none;
+  border: none;
   box-shadow: -10px -10px 80px 8px #4c1d95;
+  background-color: black;
 }

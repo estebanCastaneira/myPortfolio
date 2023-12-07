@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import sendEmail from "../../functions/sendEmail"
 import Input from "./Input"
 
@@ -11,7 +11,7 @@ function Contact() {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleOnChangeTextA = (event) => {
+  const handleOnChangeTextArea = (event) => {
     setMessage(event.target.value)
   }
 
@@ -64,13 +64,13 @@ function Contact() {
                 <textarea
                   name="message"
                   placeholder="Leave your message..."
-                  className="p-3 rounded-xl w-full h-64 bg-transparent border border-violet-900 focus:border-white"
+                  className="p-3 rounded-xl w-full h-64 bg-transparent border border-violet-800 focus:border-white"
                   value={message}
-                  onChange={handleOnChangeTextA}
+                  onChange={handleOnChangeTextArea}
                 ></textarea>
               </div>
               <div className="my-5">
-                <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-900 hover:scale-110 focus:border-white focus:scale-110 transition-all rounded-xl">
+                <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl">
                   Send
                 </button>
               </div>
