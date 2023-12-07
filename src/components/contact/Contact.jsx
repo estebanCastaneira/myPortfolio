@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState } from "react"
 import sendEmail from "../../functions/sendEmail"
 import Input from "./Input"
+import emailValidation from "../../functions/emailValidation"
 
 function Contact() {
   const sectionContact = useRef(null)
@@ -10,6 +11,7 @@ function Contact() {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
+  const [formValidation, setFormValidation] = useState({})
 
   const handleOnChangeTextArea = (event) => {
     setMessage(event.target.value)
@@ -17,11 +19,26 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    try {
-      const response = await sendEmail(form, name, email, message)
-      console.log(response)
-    } catch (error) {
-      console.log(error)
+    let validationErrors = {}
+    if (message.length < 140) {
+      validationErrors.message =
+        "Your message should have at least 140 characters"
+    }
+    if (!emailValidation(email)) {
+      validationErrors.email = "Please, put a valid email"
+    }
+    if (!name) {
+      validationErrors.name = "Please, put a contact name"
+    }
+    setFormValidation(validationErrors)
+    if (Object.keys(validationErrors).length === 0) {
+      setFormValidation(false)
+      try {
+        const response = await sendEmail(form)
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 
@@ -31,7 +48,7 @@ function Contact() {
         Conta<span className="flicker">c</span>t
       </h2>
       <div className="mt-24">
-        <form ref={form} onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit} noValidate>
           <fieldset>
             <div className="flex flex-col justify-center items-center text-xl gap-8">
               <Input
@@ -52,9 +69,9 @@ function Contact() {
               />
               <Input
                 label={"Phone :"}
-                type={"phone"}
+                type={"tel"}
                 name={"phone"}
-                placeholder={"Your phone...(optional)"}
+                placeholder={"Your phone... *optional"}
                 value={phone}
                 setValue={setPhone}
               />
@@ -70,13 +87,26 @@ function Contact() {
                 ></textarea>
               </div>
               <div className="my-5">
-                <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl">
-                  Send
-                </button>
+                <div>
+                  <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl">
+                    Send
+                  </button>
+                </div>
               </div>
             </div>
           </fieldset>
         </form>
+      </div>
+      <div className={`w-[80%] mx-auto text-center flex flex-col gap-2`}>
+        {formValidation.name && (
+          <p className="bg-red-700 p-4 rounded-lg">{formValidation.name}</p>
+        )}
+        {formValidation.email && (
+          <p className="bg-red-700 p-4 rounded-lg">{formValidation.email}</p>
+        )}
+        {formValidation.message && (
+          <p className="bg-red-700 p-4 rounded-lg">{formValidation.message}</p>
+        )}
       </div>
     </div>
   )
