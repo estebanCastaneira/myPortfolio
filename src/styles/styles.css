@@ -118,3 +118,20 @@ textarea {
   box-shadow: -10px -10px 80px 8px #4c1d95;
   background-color: black;
 }
+
+@keyframes notification {
+  0% {
+    scale: 0;
+  }
+  /* 50% {
+    scale: 1.2;
+  } */
+  100% {
+    scale: 1;
+  }
+}
+.notification {
+  transform-origin: center;
+  transition: transform;
+  animation: notification 800ms ease;
+}

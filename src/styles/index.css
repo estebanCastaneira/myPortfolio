@@ -15,6 +15,6 @@ textarea,
 label,
 legend,
 button {
-  font-family: Brezze Sans, sans-serif;
+  font-family: "Brezze-Sans", sans-serif !important;
   color: white;
 }

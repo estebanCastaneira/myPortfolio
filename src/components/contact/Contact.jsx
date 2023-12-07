@@ -1,7 +1,8 @@
 import { useRef, useState } from "react"
 import sendEmail from "../../functions/sendEmail"
-import Input from "./Input"
 import emailValidation from "../../functions/emailValidation"
+import Input from "./Input"
+import ValidationMessages from "./ValidationMessages"
 
 function Contact() {
   const sectionContact = useRef(null)
@@ -20,24 +21,32 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let validationErrors = {}
-    if (message.length < 140) {
+    if (message.length <= 140) {
       validationErrors.message =
         "Your message should have at least 140 characters"
     }
     if (!emailValidation(email)) {
-      validationErrors.email = "Please, put a valid email"
+      validationErrors.email = "Please, enter a valid e-mail"
     }
     if (!name) {
-      validationErrors.name = "Please, put a contact name"
+      validationErrors.name = "Please, enter a contact name"
     }
     setFormValidation(validationErrors)
     if (Object.keys(validationErrors).length === 0) {
-      setFormValidation(false)
       try {
         const response = await sendEmail(form)
-        console.log(response)
+
+        if (response === "OK") {
+          setName(""), setEmail(""), setPhone(""), setMessage("")
+          return setFormValidation({
+            success: "Message sended successfully!!! I'll be on touch",
+          })
+        }
       } catch (error) {
         console.log(error)
+        return setFormValidation({
+          fail: "Something went wrong... Please, try later",
+        })
       }
     }
   }
@@ -76,7 +85,7 @@ function Contact() {
                 setValue={setPhone}
               />
 
-              <div className="w-full sm:w-[80%] flex flex-col gap-3">
+              <div className="w-full sm:w-[80%] flex flex-col justify-center gap-3">
                 <label className="z-10">Message :</label>
                 <textarea
                   name="message"
@@ -85,6 +94,15 @@ function Contact() {
                   value={message}
                   onChange={handleOnChangeTextArea}
                 ></textarea>
+                <p
+                  className={`mr-2 text-sm self-end ${
+                    message.length < 140
+                      ? "text-red-600 font-thin"
+                      : "text-white font-bold"
+                  }`}
+                >
+                  {message.length}
+                </p>
               </div>
               <div className="my-5">
                 <div>
@@ -97,17 +115,7 @@ function Contact() {
           </fieldset>
         </form>
       </div>
-      <div className={`w-[80%] mx-auto text-center flex flex-col gap-2`}>
-        {formValidation.name && (
-          <p className="bg-red-700 p-4 rounded-lg">{formValidation.name}</p>
-        )}
-        {formValidation.email && (
-          <p className="bg-red-700 p-4 rounded-lg">{formValidation.email}</p>
-        )}
-        {formValidation.message && (
-          <p className="bg-red-700 p-4 rounded-lg">{formValidation.message}</p>
-        )}
-      </div>
+      <ValidationMessages formValidation={formValidation} />
     </div>
   )
 }

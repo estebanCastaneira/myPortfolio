@@ -11,5 +11,8 @@ PORTFOLIO
 card for each project
 
 CONTACT
-validations
-notifications
+spin to the SEND button meanwhile send the form
+
+FOOTER
+
+You need a Footer
