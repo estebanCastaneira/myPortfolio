@@ -3,10 +3,10 @@ HEADER/NAVBAR
 
 
 HERO
-get a really cool video mmmnah
+quizás un mejor icon for scoll
 
 ABOUT
-
+Que lo vea Lore
 PORTFOLIO
 card for each project
 
@@ -15,4 +15,4 @@ spin to the SEND button meanwhile send the form
 
 FOOTER
 
-You need a Footer
+You need a Footer +o-

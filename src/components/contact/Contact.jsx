@@ -52,7 +52,11 @@ function Contact() {
   }
 
   return (
-    <div id="contact" ref={sectionContact} className="py-32 sm:py-24">
+    <div
+      id="contact"
+      ref={sectionContact}
+      className="pt-32 pb-20 sm:pt-24 sm:pb-16"
+    >
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         Conta<span className="flicker">c</span>t
       </h2>

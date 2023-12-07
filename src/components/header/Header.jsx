@@ -2,7 +2,7 @@ import Dropdown from "./Dropdown"
 import LinkedinIcon from "../../assets/icons/LinkedinIcon"
 import GithubIcon from "../../assets/icons/GithubIcon"
 import scrollToSection from "../../functions/scrollToSection"
-
+import mail_icon from "/icons/mail_icon.png"
 function Header({ activeSection }) {
   const handleOnClik = (section) => {
     scrollToSection(section)
@@ -39,6 +39,12 @@ function Header({ activeSection }) {
                 className="inline-flex transform transition-transform hover:scale-125"
               >
                 <GithubIcon width={30} height={30} />
+              </a>
+              <a
+                href="mailto:estebanc_b@hotmail.com"
+                className="inline-flex transform transition-transform hover:scale-125"
+              >
+                <img src={mail_icon} alt="mail icon" type="img/png" />
               </a>
             </div>
           </div>

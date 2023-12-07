@@ -1,7 +1,7 @@
 function ValidationMessages({ formValidation }) {
   return (
     <div
-      className={`w-full sm:w-[60%] my-5 mx-auto text-center flex flex-col gap-2 h-[210px]`}
+      className={`w-full sm:w-[60%] mt-5 mx-auto text-center flex flex-col gap-2 h-[210px]`}
     >
       {formValidation.name && (
         <p className="notification text-lg bg-gradient-to-tl from-purple-900  to-red-600  p-3  font-bold rounded-lg">
