@@ -1,8 +1,7 @@
+import ContactLine from "../contactline/ContactLine"
 import Dropdown from "./Dropdown"
-import LinkedinIcon from "../../assets/icons/LinkedinIcon"
-import GithubIcon from "../../assets/icons/GithubIcon"
 import scrollToSection from "../../functions/scrollToSection"
-import mail_icon from "/icons/mail_icon.png"
+
 function Header({ activeSection }) {
   const handleOnClik = (section) => {
     scrollToSection(section)
@@ -23,30 +22,7 @@ function Header({ activeSection }) {
                 Full Stack Devel<span className="flicker">o</span>per
               </span>
             </h2>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.linkedin.com/in/estebancastaneira/"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex transform transition-transform hover:scale-125"
-              >
-                <LinkedinIcon width={25} height={25} />
-              </a>
-              <a
-                href="https://github.com/estebanCastaneira"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex transform transition-transform hover:scale-125"
-              >
-                <GithubIcon width={30} height={30} />
-              </a>
-              <a
-                href="mailto:estebanc_b@hotmail.com"
-                className="inline-flex transform transition-transform hover:scale-125"
-              >
-                <img src={mail_icon} alt="mail icon" type="img/png" />
-              </a>
-            </div>
+            <ContactLine />
           </div>
           <div>
             <ul className="sm:flex hidden gap-9 text-lg">

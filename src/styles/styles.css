@@ -49,11 +49,11 @@
 .neonText {
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #008fff, 0 0 42px #008fff,
-    0 0 82px #008fff, 0 0 92px #008fff, 0 0 102px #008fff, 0 0 151px #008fff;
+    0 0 82px #008fff, 0 0 92px #008fff, 0 0 102px #008fff;
 }
 .neonText .flicker {
   animation: flicker 7s ease-in-out infinite;
-  animation-delay: 0.8s;
+  /* animation-delay: 0.8s; */
 }
 .cursor {
   animation: cursor 1s infinite;
