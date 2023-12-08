@@ -1,4 +1,8 @@
 And remember...responsive is everything
+
+OVERALL 
+Ingle/Español
+
 HEADER/NAVBAR
 
 
@@ -6,7 +10,7 @@ HERO
 quizás un mejor icon for scoll
 
 ABOUT
-Que lo vea Lore
+The web features on webdevelopment
 PORTFOLIO
 card for each project
 
