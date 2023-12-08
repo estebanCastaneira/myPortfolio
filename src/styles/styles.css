@@ -94,7 +94,7 @@ textarea:focus {
   transition: all;
   transition-duration: 700ms;
 }
-.wrong-email {
+.wrong-email:focus {
   outline: #d81038;
   border: none;
   box-shadow: -10px -10px 70px 8px #ea1212;

@@ -12,6 +12,7 @@ function Contact() {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
   const [formValidation, setFormValidation] = useState({})
 
   const handleOnChangeTextArea = (event) => {
@@ -20,10 +21,10 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let validationErrors = {}
-    if (message.length <= 140) {
+    const validationErrors = {}
+    if (message.length <= 100) {
       validationErrors.message =
-        "Your message should have at least 140 characters"
+        "Your message should have at least 100 characters"
     }
     if (!emailValidation(email)) {
       validationErrors.email = "Please, enter a valid e-mail"
@@ -33,17 +34,23 @@ function Contact() {
     }
     setFormValidation(validationErrors)
     if (Object.keys(validationErrors).length === 0) {
+      setIsLoading(true)
       try {
         const response = await sendEmail(form)
 
         if (response === "OK") {
-          setName(""), setEmail(""), setPhone(""), setMessage("")
+          setName(""),
+            setEmail(""),
+            setPhone(""),
+            setMessage(""),
+            setIsLoading(false)
           return setFormValidation({
-            success: "Message sended successfully!!! I'll be on touch",
+            success: "Message sended!!! I'll be on touch",
           })
         }
       } catch (error) {
         console.log(error)
+        setIsLoading(false)
         return setFormValidation({
           fail: "Something went wrong... Please, try later",
         })
@@ -76,7 +83,7 @@ function Contact() {
                 label={"E-Mail :"}
                 type={"email"}
                 name={"email"}
-                placeholder={"Your e-mail..."}
+                placeholder={"Your @ e-mail..."}
                 value={email}
                 setValue={setEmail}
               />
@@ -100,7 +107,7 @@ function Contact() {
                 ></textarea>
                 <p
                   className={`mr-2 text-sm self-end ${
-                    message.length < 140
+                    message.length < 100
                       ? "text-red-600 font-thin"
                       : "text-white font-bold"
                   }`}
@@ -111,7 +118,7 @@ function Contact() {
               <div className="my-5">
                 <div>
                   <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl">
-                    Send
+                    {isLoading ? "Loading.." : "Send"}
                   </button>
                 </div>
               </div>
