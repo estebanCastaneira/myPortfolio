@@ -18,7 +18,7 @@ function ProjectCard({ project, isMobile }) {
   }
   return (
     <a
-      className="projectLink project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100"
+      className="projectLink project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"

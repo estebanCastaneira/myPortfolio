@@ -4,20 +4,20 @@ OVERALL
 Ingle/Español
 
 HEADER/NAVBAR
-
+done <--
 
 HERO
 quizás un mejor icon for scoll
 
 ABOUT
-The web features on webdevelopment
+animate features
+
 PORTFOLIO
-card for each project
+DEPLOY TWITTER CLONE
 in mobile the project autoiluminates when is showed
 
 CONTACT
 spin to the SEND button meanwhile send the form
 
 FOOTER
-
-You need a Footer +o-
+done <--
