@@ -1,8 +1,9 @@
 import { useRef, useState } from "react"
 import sendEmail from "../../functions/sendEmail"
 import emailValidation from "../../functions/emailValidation"
+import scrollToSection from "../../functions/scrollToSection"
 import Input from "./Input"
-import ValidationMessages from "./ValidationMessages"
+import Notifications from "./Notifications"
 
 function Contact() {
   const sectionContact = useRef(null)
@@ -33,6 +34,7 @@ function Contact() {
       validationErrors.name = "Please, enter a contact name"
     }
     setFormValidation(validationErrors)
+    scrollToSection("notifications")
     if (Object.keys(validationErrors).length === 0) {
       setIsLoading(true)
       try {
@@ -59,11 +61,7 @@ function Contact() {
   }
 
   return (
-    <div
-      id="contact"
-      ref={sectionContact}
-      className="pt-32 pb-20 sm:pt-24 sm:pb-16"
-    >
+    <div id="contact" ref={sectionContact} className="pt-32 sm:pt-24 pb-16">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         Conta<span className="flicker">c</span>t
       </h2>
@@ -117,8 +115,12 @@ function Contact() {
               </div>
               <div className="my-5">
                 <div>
-                  <button className="send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl">
-                    {isLoading ? "Loading.." : "Send"}
+                  <button
+                    className={`send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl ${
+                      isLoading && "cursor-none pointer-events-none"
+                    }`}
+                  >
+                    {isLoading ? "Loading..." : "Send"}
                   </button>
                 </div>
               </div>
@@ -126,7 +128,7 @@ function Contact() {
           </fieldset>
         </form>
       </div>
-      <ValidationMessages formValidation={formValidation} />
+      <Notifications formValidation={formValidation} />
     </div>
   )
 }
