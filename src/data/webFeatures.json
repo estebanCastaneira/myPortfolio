@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Fast",
+      "description": "Fast load times and lag free interaction, my highest priority.",
+      "icon": "/icons/fast.png"
+    },
+    {
+      "id": 2,
+      "name": "Responsive",
+      "description": "My layouts will work on any device, big or small.",
+      "icon": "/icons/responsive.png"
+    },
+    {
+      "id": 3,
+      "name": "Intuitive",
+      "description": "Strong preference for easy to use, intuitive UX/UI.",
+      "icon": "/icons/idea.svg"
+    },
+    {
+      "id": 4,
+      "name": "Dynamic",
+      "description": "Websites don't have to be static, I love making pages come to life. ",
+      "icon": "/icons/dynamic.png"
+    }
+  ]
+}

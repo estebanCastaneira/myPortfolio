@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react"
 function ProjectCard({ project, isMobile }) {
   const [mouseEnter, setMoueseEnter] = useState(false)
+
   const handleOnMouseEnter = () => {
     setMoueseEnter(true)
   }
   const handleOnMouseLeave = () => {
     setMoueseEnter(false)
   }
-
   const divStyle = {
     backgroundImage: `url(${project.image})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    width: "370px",
-    height: "370px",
+    width: "380px",
+    height: "380px",
   }
   return (
     <a
