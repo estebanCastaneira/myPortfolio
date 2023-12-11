@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Unicorn Beer E-Commerce",
-      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
+      "description": "E-commerce app developed using the MERN stack as the final project of a Coding Bootcamp",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     },
@@ -17,23 +17,23 @@
     {
       "id": 3,
       "name": "Tactical App",
-      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
-      "image": "/img/unicornbeer.jpg",
-      "url": "https://unicornbeer.vercel.app/"
+      "description": "The present project scope is to practice a React-Redux-Vite application.",
+      "image": "/img/tacticalApp.png",
+      "url": "https://verdant-pony-7ee758.netlify.app/"
     },
     {
       "id": 4,
       "name": "TodoTS",
-      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
-      "image": "/img/unicornbeer.jpg",
-      "url": "https://unicornbeer.vercel.app/"
+      "description": "CRUD to practice ReactJS + TypeScript",
+      "image": "/img/reactTS.png",
+      "url": "https://main--chipper-druid-333951.netlify.app/"
     },
     {
       "id": 5,
       "name": "Expense Checker",
-      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
-      "image": "/img/unicornbeer.jpg",
-      "url": "https://unicornbeer.vercel.app/"
+      "description": "A simple expense list to practice Tailwind CSS and some React. ",
+      "image": "/img/expenseChecker.png",
+      "url": "https://gleaming-monstera-4f4fe8.netlify.app/"
     }
   ]
 }

@@ -1,21 +1,37 @@
-import link_icon from "/icons/link_icon.png"
-function ProjectCard({ project }) {
+import { useEffect, useState } from "react"
+function ProjectCard({ project, isMobile }) {
+  const [mouseEnter, setMoueseEnter] = useState(false)
+  const handleOnMouseEnter = () => {
+    setMoueseEnter(true)
+  }
+  const handleOnMouseLeave = () => {
+    setMoueseEnter(false)
+  }
+
   const divStyle = {
     backgroundImage: `url(${project.image})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    width: "400px",
-    height: "400px",
+    width: "370px",
+    height: "370px",
   }
   return (
-    <a href={project.url} target="_blank">
-      <div
-        id={project.name}
-        className="project-card relative border border-violet-800 bg-transparent opacity-60 hover:opacity-100 "
-      >
+    <a
+      className="projectLink project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100"
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={handleOnMouseEnter}
+      onMouseLeave={handleOnMouseLeave}
+    >
+      <div id={project.id}>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-          <h3 className="neonText text-lg text-center whitespace-nowrap font-bold">
+          <h3
+            className={`${
+              (mouseEnter || isMobile) && "neonText font-bold"
+            } text-lg text-center whitespace-nowrap`}
+          >
             {project.name.toUpperCase()}
           </h3>
           <p className="bg-black bg-opacity-70 p-2 break-words text-center">

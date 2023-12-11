@@ -61,11 +61,7 @@ function Contact() {
   }
 
   return (
-    <div
-      id="contact"
-      ref={sectionContact}
-      className="pt-32 sm:pt-24 pb-16 w-[80%] mx-auto"
-    >
+    <div id="contact" ref={sectionContact} className="pt-32 sm:pt-24 pb-16">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         Conta<span className="flicker">c</span>t
       </h2>

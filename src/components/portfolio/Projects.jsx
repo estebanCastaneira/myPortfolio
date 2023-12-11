@@ -3,14 +3,16 @@ import projectsData from "../../data/projects.json"
 import { useEffect, useState } from "react"
 function Projects() {
   const [projects, setProjects] = useState([])
+  const [isMobile, setIsMobile] = useState()
   useEffect(() => {
     setProjects(projectsData.data)
+    setIsMobile(window.matchMedia("(max-width: 767px)").matches)
   }, [])
-  console.log(projects)
+
   return (
-    <div className="projectsContainer flex flex-wrap justify-center mt-20">
+    <div className="projectsContainer flex flex-wrap justify-center lg:justify-start mt-20">
       {projects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+        <ProjectCard key={project.id} project={project} isMobile={isMobile} />
       ))}
     </div>
   )

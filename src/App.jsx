@@ -35,7 +35,7 @@ function App() {
         <Header activeSection={activeSection} />
 
         <Hero />
-        <main className="">
+        <main className="w-[80%] mx-auto">
           <About />
           <Portfolio />
           <Contact />
