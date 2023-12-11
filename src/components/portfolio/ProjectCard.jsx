@@ -15,10 +15,11 @@ function ProjectCard({ project, isMobile }) {
     backgroundPosition: "center",
     width: "380px",
     height: "380px",
+    transition: "transform 0.3s ease-in-out", // Agrega una transición para la propiedad 'transform'
   }
   return (
     <a
-      className="projectLink project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"
+      className="project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
