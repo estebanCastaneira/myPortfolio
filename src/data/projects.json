@@ -9,8 +9,8 @@
     },
     {
       "id": 2,
-      "name": "Twitter Clon",
-      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
+      "name": "Twitter Clone",
+      "description": "Twitter Clone project as a class excersise to practice building a full-stack web application.",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     },

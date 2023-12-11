@@ -84,7 +84,7 @@
 /*** Portfolio ***/
 .projectsContainer {
   position: relative;
-  overflow: hidden;
+
   transition: transform 0.7s;
 }
 

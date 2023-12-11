@@ -30,8 +30,8 @@ function ProjectCard({ project, isMobile }) {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
           <h3
             className={`${
-              (mouseEnter || isMobile) && "neonText font-bold"
-            } text-lg text-center whitespace-nowrap`}
+              (mouseEnter || isMobile) && "neonText"
+            } text-lg text-center font-bold whitespace-nowrap`}
           >
             {project.name.toUpperCase()}
           </h3>
