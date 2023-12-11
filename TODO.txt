@@ -13,6 +13,7 @@ ABOUT
 The web features on webdevelopment
 PORTFOLIO
 card for each project
+in mobile the project autoiluminates when is showed
 
 CONTACT
 spin to the SEND button meanwhile send the form

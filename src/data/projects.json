@@ -2,36 +2,36 @@
   "data": [
     {
       "id": 1,
-      "projectName": "Unicorn Beer E-Commerce",
-      "description": "Unicorn Beer is an e-commerce app developed using the MERN stack as the final project of a Coding Bootcamp at Hack Academy, an educational institution that specializes in programming courses. The Bootcamp is an immersive and intensive full-time course that lasts for three months and takes a total of 600 hours. Its goal is to prepare its students to be Full Stack Developers. This final project aims to showcase the application of the diverse technologies learned throughout the Bootcamp.The web app was developed over a period of three weeks by a team of five students, totaling approximately 150 hours of work per student. It is a fully functional app designed to be user-friendly and easy to navigate.",
+      "name": "Unicorn Beer E-Commerce",
+      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 2,
-      "projectName": "Twitter Clon",
-      "description": "Unicorn Beer is an e-commerce app developed using the MERN stack as the final project of a Coding Bootcamp at Hack Academy, an educational institution that specializes in programming courses. The Bootcamp is an immersive and intensive full-time course that lasts for three months and takes a total of 600 hours. Its goal is to prepare its students to be Full Stack Developers. This final project aims to showcase the application of the diverse technologies learned throughout the Bootcamp.The web app was developed over a period of three weeks by a team of five students, totaling approximately 150 hours of work per student. It is a fully functional app designed to be user-friendly and easy to navigate.",
+      "name": "Twitter Clon",
+      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
+      "image": "/img/unicornbeer.jpg",
+      "url": "https://unicornbeer.vercel.app/"
+    },
+    {
+      "id": 3,
+      "name": "Tactical App",
+      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 4,
-      "projectName": "Tactical App",
-      "description": "Unicorn Beer is an e-commerce app developed using the MERN stack as the final project of a Coding Bootcamp at Hack Academy, an educational institution that specializes in programming courses. The Bootcamp is an immersive and intensive full-time course that lasts for three months and takes a total of 600 hours. Its goal is to prepare its students to be Full Stack Developers. This final project aims to showcase the application of the diverse technologies learned throughout the Bootcamp.The web app was developed over a period of three weeks by a team of five students, totaling approximately 150 hours of work per student. It is a fully functional app designed to be user-friendly and easy to navigate.",
-      "image": "/img/unicornbeer.jpg",
-      "url": "https://unicornbeer.vercel.app/"
-    },
-    {
-      "id": 4,
-      "projectName": "TodoTS",
-      "description": "Unicorn Beer is an e-commerce app developed using the MERN stack as the final project of a Coding Bootcamp at Hack Academy, an educational institution that specializes in programming courses. The Bootcamp is an immersive and intensive full-time course that lasts for three months and takes a total of 600 hours. Its goal is to prepare its students to be Full Stack Developers. This final project aims to showcase the application of the diverse technologies learned throughout the Bootcamp.The web app was developed over a period of three weeks by a team of five students, totaling approximately 150 hours of work per student. It is a fully functional app designed to be user-friendly and easy to navigate.",
+      "name": "TodoTS",
+      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 5,
-      "projectName": "Expense Checker",
-      "description": "Unicorn Beer is an e-commerce app developed using the MERN stack as the final project of a Coding Bootcamp at Hack Academy, an educational institution that specializes in programming courses. The Bootcamp is an immersive and intensive full-time course that lasts for three months and takes a total of 600 hours. Its goal is to prepare its students to be Full Stack Developers. This final project aims to showcase the application of the diverse technologies learned throughout the Bootcamp.The web app was developed over a period of three weeks by a team of five students, totaling approximately 150 hours of work per student. It is a fully functional app designed to be user-friendly and easy to navigate.",
+      "name": "Expense Checker",
+      "description": "Texto de prueba para ver cuantas lineas podemos poner sin que se rompa el diseño y que podemos explicar del mismo",
       "image": "/img/unicornbeer.jpg",
       "url": "https://unicornbeer.vercel.app/"
     }

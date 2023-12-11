@@ -1,7 +1,8 @@
-function ValidationMessages({ formValidation }) {
+function Notifications({ formValidation }) {
   return (
     <div
       className={`w-full sm:w-[60%] mt-5 mx-auto text-center flex flex-col gap-2 h-[210px]`}
+      id="notifications"
     >
       {formValidation.name && (
         <p className="notification text-lg bg-gradient-to-tl from-purple-900  to-red-600  p-3  font-bold rounded-lg">
@@ -32,4 +33,4 @@ function ValidationMessages({ formValidation }) {
   )
 }
 
-export default ValidationMessages
+export default Notifications

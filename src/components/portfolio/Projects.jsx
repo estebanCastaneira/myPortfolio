@@ -1,17 +1,17 @@
 import ProjectCard from "./ProjectCard"
 import projectsData from "../../data/projects.json"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 function Projects() {
+  const [projects, setProjects] = useState([])
   useEffect(() => {
-    const projects = projectsData.data
-    console.log(projects)
+    setProjects(projectsData.data)
   }, [])
-
+  console.log(projects)
   return (
-    <div className="projectsContainer">
-      <div>
-        <img src="" alt="" />
-      </div>
+    <div className="projectsContainer flex flex-wrap justify-center gap-1 mt-20">
+      {projects.map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
     </div>
   )
 }
