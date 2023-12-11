@@ -82,13 +82,23 @@
   box-shadow: #008fff -20px 5px 80px;
 }
 /* Portfolio */
-
+.project-card:hover {
+  border: white;
+  box-shadow: -10px -10px 70px 8px #4c1d95;
+  background-color: black;
+  transition: all;
+  transition-duration: 700ms;
+  scale: 1.03;
+}
 /* Contact */
-
+.input::placeholder,
+textarea::placeholder {
+  color: rgb(194, 166, 238);
+}
 .input:focus,
 textarea:focus {
   outline: #4c1d95;
-  border: none;
+  border: #5b21b6 10px;
   box-shadow: -10px -10px 70px 8px #4c1d95;
   background-color: black;
   transition: all;
@@ -103,7 +113,7 @@ textarea:focus {
   transition-duration: 700ms;
 }
 label {
-  margin-left: 0.25rem;
+  margin: 0 0 0.75rem 0.25rem;
 }
 textarea {
   resize: none;
