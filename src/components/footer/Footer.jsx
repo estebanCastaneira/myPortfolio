@@ -3,17 +3,15 @@ function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="bg-zinc-900 py-10">
-      <div className="w-[80%] my-0 mx-auto flex flex-col">
-        <div>
-          <p className="font-thin text-lg text-center">
-            © Copyright {year} Esteban Castañeira.
-          </p>
-          <p className="font-thin text-lg text-center mt-1">
-            Montevideo, Uruguay 🧉 🇺🇾.
-          </p>
-        </div>
-        <div className="self-start ">
-          <ContactLine />
+      <div className="w-[80%] my-0 mx-auto flex flex-col sm:justify-end sm:items-center gap-2 relative">
+        <p className="font-thin text-lg  whitespace-nowrap">
+          © Copyright {year} Esteban Castañeira.
+        </p>
+        <div className="flex flex-col gap-2">
+          <p className="font-thin text-lg">Montevideo, Uruguay 🧉 🇺🇾.</p>
+          <div className="sm:absolute sm:left-0 ">
+            <ContactLine />
+          </div>
         </div>
       </div>
     </footer>
