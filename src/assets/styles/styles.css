@@ -62,7 +62,7 @@
 .neon {
   transition: all 0.3s ease;
 }
-/* About */
+/*** About ***/
 .container-profile {
   perspective: 60rem;
   display: flex;
@@ -81,7 +81,7 @@
 .container-profile:hover .profile img {
   box-shadow: #008fff -20px 5px 80px;
 }
-/* Portfolio */
+/*** Portfolio ***/
 .project-card:hover {
   border: white;
   box-shadow: -10px -10px 70px 8px #4c1d95;
@@ -89,8 +89,9 @@
   transition: all;
   transition-duration: 700ms;
   scale: 1.03;
+  z-index: 9;
 }
-/* Contact */
+/*** Contact ***/
 .input::placeholder,
 textarea::placeholder {
   color: rgb(194, 166, 238);

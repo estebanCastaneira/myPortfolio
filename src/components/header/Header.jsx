@@ -11,7 +11,7 @@ function Header({ activeSection }) {
       <nav>
         <div className="w-[80%] my-0 mx-auto flex justify-between items-center sm:items-start ">
           <div className="flex flex-col items-start justify-center">
-            <h2 className="font-bold mr-10 text-lg">
+            <h1 className="font-bold mr-10 text-lg">
               Esteban Castañeira
               <span
                 className={`sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest z-20 ${
@@ -21,7 +21,7 @@ function Header({ activeSection }) {
               >
                 Full Stack Devel<span className="flicker">o</span>per
               </span>
-            </h2>
+            </h1>
             <ContactLine />
           </div>
           <div>

@@ -8,7 +8,7 @@ function Projects() {
   }, [])
   console.log(projects)
   return (
-    <div className="projectsContainer flex flex-wrap justify-center gap-1 mt-20">
+    <div className="projectsContainer flex flex-wrap justify-center mt-20">
       {projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}

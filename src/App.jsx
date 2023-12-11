@@ -36,11 +36,9 @@ function App() {
 
         <Hero />
         <main className="">
-          <div className="w-[80%] mx-auto">
-            <About />
-            <Portfolio />
-            <Contact />
-          </div>
+          <About />
+          <Portfolio />
+          <Contact />
         </main>
         <Footer />
       </div>
