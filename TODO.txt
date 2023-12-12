@@ -13,13 +13,12 @@ ABOUT
 animate features
 
 PORTFOLIO
-DEPLOY TWITTER CLONE
+-DEPLOY TWITTER CLONE
 in mobile the project autoiluminates when is showed
 
 CONTACT
-spin to the SEND button meanwhile send the form
+fix the inputs movement
+evalute if labels are necessary
 
 FOOTER
 done <--
-
---base=./
