@@ -21,3 +21,5 @@ spin to the SEND button meanwhile send the form
 
 FOOTER
 done <--
+
+--base=./
