@@ -12,7 +12,7 @@ function ProjectCard({ project, isMobile }) {
     backgroundImage: `url(${project.image})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
+    backgroundPosition: "50% , 80% ",
     width: "380px",
     height: "380px",
     transition: "transform 0.3s ease-in-out", // Agrega una transición para la propiedad 'transform'
@@ -27,7 +27,7 @@ function ProjectCard({ project, isMobile }) {
       onMouseLeave={handleOnMouseLeave}
     >
       <div id={project.id}>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10">
           <h3
             className={`${
               (mouseEnter || isMobile) && "neonText"
@@ -40,7 +40,7 @@ function ProjectCard({ project, isMobile }) {
           </p>
         </div>
 
-        <div style={divStyle}></div>
+        <div className="opacity-80" style={divStyle}></div>
       </div>
     </a>
   )

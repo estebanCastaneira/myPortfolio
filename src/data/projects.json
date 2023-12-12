@@ -4,14 +4,14 @@
       "id": 1,
       "name": "Unicorn Beer E-Commerce",
       "description": "E-commerce app developed using the MERN stack as the final project of a Coding Bootcamp",
-      "image": "/img/unicornbeer.jpg",
+      "image": "/img/unicornbeer.png",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 2,
       "name": "Twitter Clone",
       "description": "Twitter Clone project as a class excersise to practice building a full-stack web application.",
-      "image": "/img/unicornbeer.jpg",
+      "image": "/img/twitterClone.png",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
