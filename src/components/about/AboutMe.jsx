@@ -2,8 +2,8 @@ import me from "/img/me.jpg"
 function AboutMe() {
   return (
     <div>
-      <h3 className="neonText text-2xl sm:text-4xl text-center tracking-widest">
-        About <span className="flicker">M</span>e
+      <h3 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
+        <span className="flicker">M</span>e
       </h3>
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
         <div className="container-profile sm:w-[50%] ">

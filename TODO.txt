@@ -1,6 +1,7 @@
 And remember...responsive is everything
 
 OVERALL 
+optimizar todas las img and videos
 Ingle/Español
 
 HEADER/NAVBAR
@@ -8,6 +9,8 @@ done <--
 
 HERO
 quizás un mejor icon for scoll
+se rompe en iphone
+se rompe en monitores grandes
 
 ABOUT
 animate features
@@ -19,6 +22,6 @@ in mobile the project autoiluminates when is showed
 CONTACT
 fix the inputs movement
 evalute if labels are necessary
-
+😱 mail does not send!
 FOOTER
 done <--
