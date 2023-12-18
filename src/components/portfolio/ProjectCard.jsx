@@ -30,7 +30,6 @@ function ProjectCard({ project, isMobile }) {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-  console.log(isVisible, project.id)
   return (
     <a
       className={`${

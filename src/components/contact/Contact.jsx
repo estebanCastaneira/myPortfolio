@@ -39,7 +39,7 @@ function Contact() {
       setIsLoading(true)
       try {
         const response = await sendEmail(form)
-
+        console.log(response)
         if (response === "OK") {
           setName(""),
             setEmail(""),
