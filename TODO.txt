@@ -17,7 +17,8 @@ animate features
 
 PORTFOLIO
 -DEPLOY TWITTER CLONE
-in mobile the project autoiluminates when is showed
+in mobile the project autoiluminates when is showed x
+the whole block should be scale no transpositions allowed
 
 CONTACT
 fix the inputs movement

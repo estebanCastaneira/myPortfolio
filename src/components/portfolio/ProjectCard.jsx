@@ -20,7 +20,7 @@ function ProjectCard({ project, isMobile }) {
     backgroundPosition: "50% , 80% ",
     width: "380px",
     height: "380px",
-    transition: "transform 0.3s ease-in-out", // Agrega una transición para la propiedad 'transform'
+    transition: "transform 0.3s ease-in-out",
   }
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +35,7 @@ function ProjectCard({ project, isMobile }) {
     <a
       className={`${
         isVisible && isMobile ? "opacity-100" : "opacity-50"
-      } "project-card relative transition-all sm:opacity-50  bg-transparent sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"`}
+      } "project-card relative transition-all sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"`}
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
