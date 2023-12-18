@@ -8,7 +8,12 @@ function AboutMe() {
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
         <div className="container-profile sm:w-[50%] ">
           <div className="profile w-[88%]">
-            <img className="rounded-full" src={me} alt="" />
+            <img
+              className="rounded-full"
+              src={me}
+              alt="Esteban Castañeira Picture"
+              type="img/webp"
+            />
           </div>
         </div>
         <div className="sm:w-[50%] sm:text-xl">
