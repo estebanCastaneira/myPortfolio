@@ -7,6 +7,7 @@ function WebDevelopment() {
   useEffect(() => {
     setWebFeatures(wfData.data)
   }, [])
+
   return (
     <div className="my-20 grid grid-cols-2 sm:grid-cols-4 sm:grid-flow-col gap-5">
       {webFeatures.map((feature) => (

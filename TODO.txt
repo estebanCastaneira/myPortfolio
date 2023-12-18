@@ -13,7 +13,7 @@ se rompe en iphone
 se rompe en monitores grandes x
 
 ABOUT
-animate features
+animate features // hablar con Lore
 
 PORTFOLIO
 -DEPLOY TWITTER CLONE
@@ -21,8 +21,8 @@ in mobile the project autoiluminates when is showed x
 the whole block should be scale no transpositions allowed
 
 CONTACT
-fix the inputs movement
-evalute if labels are necessary
-😱 mail does not send!
+done <--
+maybe a spin instead loading
+
 FOOTER
 done <--

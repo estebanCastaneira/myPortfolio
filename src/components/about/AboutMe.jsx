@@ -1,4 +1,4 @@
-import me from "/img/me.jpg"
+import me from "/img/me.webp"
 function AboutMe() {
   return (
     <div>

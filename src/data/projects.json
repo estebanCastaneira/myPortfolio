@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Unicorn Beer E-Commerce",
       "description": "E-commerce app developed using the MERN stack as the final project of a Coding Bootcamp",
-      "image": "/img/unicornbeer.png",
+      "image": "/img/unicornbeer.webp",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 2,
       "name": "Twitter Clone",
       "description": "Twitter Clone project as a class excersise to practice building a full-stack web application.",
-      "image": "/img/twitterClone.png",
+      "image": "/img/twitterClone.webp",
       "url": "https://twitter-front-end-git-main-estebancastaneira.vercel.app/"
     },
     {
       "id": 3,
       "name": "Tactical App",
       "description": "The present project scope is to practice a React-Redux-Vite application.",
-      "image": "/img/tacticalApp.png",
+      "image": "/img/tacticalApp.webp",
       "url": "https://verdant-pony-7ee758.netlify.app/"
     },
     {
@@ -32,7 +32,7 @@
       "id": 5,
       "name": "Expense Checker",
       "description": "A simple expense list to practice Tailwind CSS and some React. ",
-      "image": "/img/expenseChecker.png",
+      "image": "/img/expenseChecker.webp",
       "url": "https://gleaming-monstera-4f4fe8.netlify.app/"
     }
   ]
