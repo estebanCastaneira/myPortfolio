@@ -12,7 +12,7 @@ function Hero() {
       <video
         autoPlay
         loop
-        className="h-screen object-cover transform md:transform-none w-auto filter-video opacity-40"
+        className="h-screen object-cover transform md:transform-none w-full filter-video opacity-40"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
