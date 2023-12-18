@@ -1,5 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import isInViewPort from "../../functions/isInViewporrt"
+
 function ProjectCard({ project, isMobile }) {
+  const elementRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
   const [mouseEnter, setMoueseEnter] = useState(false)
 
   const handleOnMouseEnter = () => {
@@ -8,6 +12,7 @@ function ProjectCard({ project, isMobile }) {
   const handleOnMouseLeave = () => {
     setMoueseEnter(false)
   }
+
   const divStyle = {
     backgroundImage: `url(${project.image})`,
     backgroundSize: "cover",
@@ -17,20 +22,32 @@ function ProjectCard({ project, isMobile }) {
     height: "380px",
     transition: "transform 0.3s ease-in-out", // Agrega una transición para la propiedad 'transform'
   }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(isInViewPort(elementRef))
+    }
+    handleScroll()
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+  console.log(isVisible, project.id)
   return (
     <a
-      className="project-card relative  bg-transparent opacity-100 sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"
+      className={`${
+        isVisible && isMobile ? "opacity-100" : "opacity-50"
+      } "project-card relative transition-all sm:opacity-50  bg-transparent sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"`}
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={handleOnMouseEnter}
       onMouseLeave={handleOnMouseLeave}
+      ref={elementRef}
     >
       <div id={project.id}>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10">
           <h3
             className={`${
-              (mouseEnter || isMobile) && "neonText"
+              (mouseEnter || isVisible) && "neonText"
             } text-lg text-center font-bold whitespace-nowrap`}
           >
             {project.name.toUpperCase()}

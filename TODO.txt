@@ -10,7 +10,7 @@ done <--
 HERO
 quizás un mejor icon for scoll
 se rompe en iphone
-se rompe en monitores grandes
+se rompe en monitores grandes x
 
 ABOUT
 animate features
