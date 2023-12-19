@@ -70,7 +70,6 @@ function Contact() {
           <fieldset>
             <div className="flex flex-col justify-center items-center text-xl gap-8">
               <Input
-                label={"Name :"}
                 type={"text"}
                 name={"name"}
                 placeholder={"Your name..."}
@@ -78,24 +77,21 @@ function Contact() {
                 setValue={setName}
               />
               <Input
-                label={"E-Mail :"}
                 type={"email"}
                 name={"email"}
-                placeholder={"Your @ e-mail..."}
+                placeholder={"Your e-mail..."}
                 value={email}
                 setValue={setEmail}
               />
               <Input
-                label={"Phone :"}
                 type={"tel"}
                 name={"phone"}
-                placeholder={"Your phone... *optional"}
+                placeholder={"Your phone... (optional)"}
                 value={phone}
                 setValue={setPhone}
               />
 
               <div className="w-full sm:w-[80%] flex flex-col justify-center gap-3">
-                <label className="z-10">Message :</label>
                 <textarea
                   name="message"
                   placeholder="Leave your message..."
