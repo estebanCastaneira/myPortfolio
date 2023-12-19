@@ -3,6 +3,7 @@ import scroll_icon from "/icons/scroll_icon.png"
 
 function Hero() {
   const sectionHero = useRef(null)
+
   return (
     <div
       id="hero"
@@ -17,7 +18,10 @@ function Hero() {
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
-      <h3 className="cursor-default text-4xl sm:text-7xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9] text-center w-full whitespace-nowrap neonText tracking-widest">
+      <h3
+        id="textHero"
+        className="cursor-default text-4xl sm:text-7xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9] text-center w-full whitespace-nowrap neonText tracking-widest"
+      >
         Hello World<span className="cursor">_</span>
       </h3>
       <div className="absolute bottom-0 animate-bounce block">

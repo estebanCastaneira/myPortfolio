@@ -1,6 +1,6 @@
 import { useState } from "react"
 import emailValidation from "../../functions/emailValidation"
-function Input({ label, type, name, placeholder, value, setValue }) {
+function Input({ type, name, placeholder, value, setValue }) {
   const [validEmail, setValidEmail] = useState(true)
 
   const handleOnChange = (e) => {
