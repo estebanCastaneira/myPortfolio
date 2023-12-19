@@ -1,8 +1,8 @@
 And remember...responsive is everything
 
 OVERALL 
-optimizar todas las img and videos
-Ingle/Español
+optimizar todas las img and videos x
+Ingle/Español (allá a las cansadas)
 
 HEADER/NAVBAR
 done <--
@@ -13,7 +13,7 @@ se rompe en iphone
 se rompe en monitores grandes x
 
 ABOUT
-animate features // hablar con Lore
+animate features <-- done
 
 PORTFOLIO
 -DEPLOY TWITTER CLONE

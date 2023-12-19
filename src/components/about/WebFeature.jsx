@@ -1,31 +1,37 @@
 import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 function WebFeature({ feature }) {
-  const featureRef = useRef(null)
+  const featureRef = useRef()
 
-  const handleExpand = (event) => {
-    gsap.to(event.target, {
-      duration: 0.8,
-      scale: 1.3,
-      ease: "power2.out",
-    })
-  }
+  useEffect(() => {
+    const animation = gsap.fromTo(
+      featureRef.current,
+      {
+        opacity: 0,
+        y: Math.random() * 300 - 100,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: featureRef.current,
+        },
+      }
+    )
 
-  const handleShrink = (event) => {
-    gsap.to(event.target, {
-      duration: 0.8,
-      scale: 1,
-      ease: "power2.out",
-    })
-  }
-  useEffect(() => {}, [])
+    return () => {
+      animation.kill()
+    }
+  }, [])
   return (
     <div
       className="flex flex-col justify-start items-center gap-3"
       ref={featureRef}
-      onMouseMove={handleExpand}
-      onMouseOut={handleShrink}
     >
       <div className="bg-gradient-to-bl from-violet-50 via-transparent to-violet-800 rounded-full p-8 ">
         <img
