@@ -1,6 +1,7 @@
 import LinkedinIcon from "../../assets/icons/LinkedinIcon"
 import GithubIcon from "../../assets/icons/GithubIcon"
 import MailIcon from "../../assets/icons/MailIcon"
+import PdfIcon from "../../assets/icons/PdfIcon"
 function ContactLine() {
   return (
     <div className="flex items-center gap-4">
@@ -21,6 +22,7 @@ function ContactLine() {
         <GithubIcon width={30} height={30} />
       </a>
       <MailIcon />
+      <PdfIcon />
     </div>
   )
 }
