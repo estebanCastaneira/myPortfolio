@@ -13,7 +13,7 @@ function Input({ type, name, placeholder, value, setValue }) {
   return (
     <div className="flex flex-col w-full sm:w-[80%]">
       <input
-        className={`p-3 rounded-xl bg-transparent border border-violet-800  ${
+        className={`p-3 rounded-xl bg-black border border-violet-800  ${
           validEmail ? "input " : "wrong-email"
         }`}
         type={type}

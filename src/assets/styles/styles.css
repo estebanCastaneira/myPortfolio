@@ -53,7 +53,6 @@
 }
 .neonText .flicker {
   animation: flicker 7s ease-in-out infinite;
-  /* animation-delay: 0.8s; */
 }
 .cursor {
   animation: cursor 1s infinite;
@@ -109,7 +108,7 @@ textarea:focus {
   outline: #4c1d95;
   border: #5b21b6 10px;
   box-shadow: -10px -10px 70px 8px #4c1d95;
-  background-color: black;
+  background-color: rgb(46 16 101);
   transition: all;
   transition-duration: 700ms;
 }

@@ -95,7 +95,7 @@ function Contact() {
                 <textarea
                   name="message"
                   placeholder="Leave your message..."
-                  className="p-3 rounded-xl w-full h-64 bg-transparent border border-violet-800 focus:border-white"
+                  className="p-3 rounded-xl w-full h-64 bg-black border border-violet-800 focus:border-white"
                   value={message}
                   onChange={handleOnChangeTextArea}
                 ></textarea>
@@ -112,7 +112,7 @@ function Contact() {
               <div className="my-5">
                 <div>
                   <button
-                    className={`send-button text-2xl py-4 px-6 bg-transparent border border-violet-800 hover:scale-110 focus:scale-110 transition-all rounded-xl ${
+                    className={`send-button text-2xl py-4 px-6 bg-black border border-violet-800 hover:scale-110 focus:scale-110 hover:bg-violet-950 transition-all rounded-xl ${
                       isLoading && "cursor-none pointer-events-none"
                     }`}
                   >
