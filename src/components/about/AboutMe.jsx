@@ -17,18 +17,18 @@ function AboutMe() {
           </div>
         </div>
         <div className="sm:w-[50%] sm:text-xl">
-          <p>Hello, there! I'm Esteban. 👋🏽</p>
-          <p>
-            In 2020 the pandemic prompted me to reevaluate my career in
-            Psychology. I chose to leave it behind and quickly discovered a
-            passion for Programming. Since then, I've been dedicating time to
-            developing my programming skills and knowledge. 🤓 📚
+          <p className="mb-3">Hello, there! 👋🏽</p>
+          <p className="mb-3">
+            In 2020 the pandemic led to a reassessment of my career in
+            Psychology. Opting to move on, quickly discovered a passion for
+            Programming. Since then, time has been devoted to developing
+            programming skills and expanding knowledge. 🤓 📚
           </p>
-          <p>
-            Now, having successfully completed my studies as a Jr. Full Stack
-            Dev, I'm seeking opportunities in the IT field to apply what I've
-            learned, contribute to projects, and continue growing in this
-            exciting area. 🔎 💻 👉🏽 🚀 💪🏽
+          <p className="mb-3">
+            Now, with successful completion of studies as a Jr. Full Stack Dev,
+            the focus is on seeking opportunities in the IT field. The aim is to
+            apply acquired knowledge, contribute to projects, and continue
+            growing in this dynamic area. 🔎 💻 👉🏽 🚀 💪🏽
           </p>
         </div>
       </div>
