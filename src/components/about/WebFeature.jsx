@@ -39,6 +39,7 @@ function WebFeature({ feature }) {
           alt={`${feature.name} icon`}
           width={50}
           height={50}
+          loading="lazy"
         />
       </div>
 

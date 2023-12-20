@@ -13,6 +13,7 @@ function AboutMe() {
               src={me}
               alt="Esteban Castañeira Picture"
               type="img/webp"
+              loading="lazy"
             />
           </div>
         </div>
