@@ -12,10 +12,10 @@ function WebFeature({ feature }) {
       featureRef.current,
       {
         opacity: 0,
-        y: Math.random() * 300 - 100,
+        y: -100,
       },
       {
-        duration: 2,
+        duration: 1.5,
         opacity: 1,
         y: 0,
         scrollTrigger: {
