@@ -18,6 +18,7 @@ function ProjectCard({ project, isMobile }) {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50% , 80% ",
+
     width: "380px",
     height: "380px",
     transition: "transform 0.3s ease-in-out",
@@ -51,12 +52,14 @@ function ProjectCard({ project, isMobile }) {
           >
             {project.name.toUpperCase()}
           </h3>
-          <p className="bg-black bg-opacity-70 p-2 break-words text-center">
+          <p className="bg-black bg-opacity-80 p-2 break-words text-center">
             {project.description}
           </p>
         </div>
 
-        <div className="opacity-80" style={divStyle}></div>
+        <div className="relative" style={divStyle}>
+          <div className="absolute h-full w-full bg-gradient-to-t from-zinc-800 to-violet-950 opacity-60"></div>
+        </div>
       </div>
     </a>
   )
