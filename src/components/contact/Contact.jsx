@@ -23,9 +23,9 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     const validationErrors = {}
-    if (message.length <= 100) {
+    if (message.length <= 50 || message.length >= 200) {
       validationErrors.message =
-        "Your message should have at least 100 characters"
+        "Your message should have at least 50 characters and less than 200"
     }
     if (!emailValidation(email)) {
       validationErrors.email = "Please, enter a valid e-mail"
@@ -47,7 +47,7 @@ function Contact() {
             setMessage(""),
             setIsLoading(false)
           return setFormValidation({
-            success: "Message sended!!! I'll be on touch",
+            success: "Message sended!!! I'll be in touch",
           })
         }
       } catch (error) {
@@ -101,7 +101,7 @@ function Contact() {
                 ></textarea>
                 <p
                   className={`mr-2 text-sm self-end ${
-                    message.length < 100
+                    message.length < 50 || message.length > 200
                       ? "text-red-600 font-thin"
                       : "text-white font-bold"
                   }`}
