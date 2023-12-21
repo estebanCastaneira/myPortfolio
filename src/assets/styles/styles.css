@@ -61,6 +61,20 @@
 .neon {
   transition: all 0.3s ease;
 }
+/*** Hero ***/
+
+#video::-webkit-media-controls {
+  display: none !important;
+}
+
+#video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+#video::-webkit-media-controls-play-button,
+#video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
 /*** About ***/
 .container-profile {
   perspective: 60rem;
