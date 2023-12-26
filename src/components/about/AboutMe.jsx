@@ -6,16 +6,14 @@ function AboutMe() {
         <span className="flicker">M</span>e
       </h3>
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
-        <div className="container-profile sm:w-[50%] ">
-          <div className="profile w-[88%]">
-            <img
-              className="rounded-full"
-              src={me}
-              alt="Esteban Castañeira Picture"
-              type="img/webp"
-              loading="lazy"
-            />
-          </div>
+        <div className="sm:w-[50%]">
+          <img
+            className="rounded-full w-[88%] profile"
+            src={me}
+            alt="Esteban Castañeira Picture"
+            type="img/webp"
+            loading="lazy"
+          />
         </div>
         <div className="sm:w-[50%] sm:text-xl">
           <p className="mb-3">Hello, there! 👋🏽</p>

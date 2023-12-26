@@ -76,23 +76,13 @@
   display: none !important;
 }
 /*** About ***/
-.container-profile {
-  perspective: 60rem;
-  display: flex;
-  justify-content: center;
-}
 .profile {
-  transition: rotate 600ms, scale 1s;
+  transition: box-shadow 1s;
+  transition: scale 1s;
 }
-.container-profile:hover .profile {
-  rotate: y 1turn;
-  scale: 1.1;
-}
-.container-profile:hover {
-  rotate: y 10deg;
-}
-.container-profile:hover .profile img {
+.profile:hover {
   box-shadow: #008fff -20px 5px 80px;
+  scale: 1.1;
 }
 /*** Portfolio ***/
 .projectsContainer {
