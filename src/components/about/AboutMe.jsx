@@ -50,7 +50,7 @@ function AboutMe() {
         <span className="flicker">M</span>e
       </h3>
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
-        <div className="sm:w-[50%]">
+        <div className="sm:w-[50%] flex justify-center">
           <img
             className="rounded-full w-[88%] profile"
             src={me}
