@@ -1,5 +1,49 @@
+import { useRef, useEffect } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import me from "/img/me.webp"
+
+gsap.registerPlugin(ScrollTrigger)
 function AboutMe() {
+  const textRef = useRef()
+  const imgRef = useRef()
+  useEffect(() => {
+    const animateFromLeft = gsap.fromTo(
+      imgRef.current,
+      {
+        opacity: 0,
+        x: -100,
+      },
+      {
+        duration: 1.5,
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: imgRef.current,
+        },
+      }
+    )
+    const animateFromRight = gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        duration: 1.5,
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: textRef.current,
+        },
+      }
+    )
+
+    return () => {
+      animateFromLeft.kill()
+      animateFromRight.kill()
+    }
+  }, [])
   return (
     <div>
       <h3 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
@@ -10,12 +54,13 @@ function AboutMe() {
           <img
             className="rounded-full w-[88%] profile"
             src={me}
+            ref={imgRef}
             alt="Esteban Castañeira Picture"
             type="img/webp"
             loading="lazy"
           />
         </div>
-        <div className="sm:w-[50%] sm:text-xl">
+        <div className="sm:w-[50%] sm:text-xl" ref={textRef}>
           <p className="mb-3">Hello, there! 👋🏽</p>
           <p className="mb-3">
             In 2020 the pandemic led to a reassessment of my career in
