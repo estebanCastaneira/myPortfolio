@@ -77,12 +77,12 @@
 }
 /*** About ***/
 .profile {
-  transition: box-shadow 1s;
-  transition: scale 1s;
+  transition: box-shadow 1s !important;
+  transition: scale 1s !important;
 }
 .profile:hover {
-  box-shadow: #008fff -20px 5px 80px;
-  scale: 1.1;
+  box-shadow: #008fff -20px 5px 80px !important;
+  scale: 1.1 !important;
 }
 /*** Portfolio ***/
 .projectsContainer {

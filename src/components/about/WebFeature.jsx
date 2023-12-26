@@ -43,8 +43,8 @@ function WebFeature({ feature }) {
         />
       </div>
 
-      <h4 className="tracking-widest text-lg">{feature.name}</h4>
-      <p className="text-center text-sm sm:w-[70%]">{feature.description}</p>
+      <h4 className="tracking-widest text-lg">{feature.name_en}</h4>
+      <p className="text-center text-sm sm:w-[70%]">{feature.description_en}</p>
     </div>
   )
 }

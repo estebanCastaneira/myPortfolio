@@ -69,7 +69,7 @@ function Dropdown({ activeSection }) {
         </span>
       </button>
       {isOpen && (
-        <div className="bg-zinc-800 bg-opacity-30 absolute top-12 rounded-lg border border-zinc-700 p-3 mr-4">
+        <div className="bg-zinc-800 bg-opacity-60 absolute top-12 rounded-lg border border-zinc-700 p-3 mr-4">
           <ul className="flex flex-col items-center gap-6 ">
             <li className="flex justify-center hover:brightness-105 px-4 py-1 w-full">
               <button

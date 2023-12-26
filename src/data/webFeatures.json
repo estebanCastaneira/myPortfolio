@@ -2,26 +2,34 @@
   "data": [
     {
       "id": 1,
-      "name": "Fast",
-      "description": "Fast load times and lag free interaction, my highest priority.",
+      "name_en": "Fast",
+      "description_en": "Fast load times and lag free interaction, my highest priority.",
+      "name_es": "Rápido",
+      "description_es": "Mi mayor prioridad son los tiempos de carga veloces",
       "icon": "/icons/fast.png"
     },
     {
       "id": 2,
-      "name": "Responsive",
-      "description": "My layouts will work on any device, big or small.",
+      "name_en": "Responsive",
+      "description_en": "My layouts will work on any device, big or small.",
+      "name_es": "Responsive",
+      "description_es": "Mis diseños funcionarán en cualquier dispositivo, grande o chico",
       "icon": "/icons/responsive.png"
     },
     {
       "id": 3,
-      "name": "Intuitive",
-      "description": "Strong preference for easy to use, intuitive UX/UI.",
+      "name_en": "Intuitive",
+      "description_en": "Strong preference for easy to use, intuitive UX/UI.",
+      "name_es": "Intuitivo",
+      "description_es": "Gran preferencia por intuitiva UX/UI",
       "icon": "/icons/idea.svg"
     },
     {
       "id": 4,
-      "name": "Dynamic",
-      "description": "Websites don't have to be static, I love making pages come to life. ",
+      "name_en": "Dynamic",
+      "description_en": "Websites don't have to be static, I love making pages come to life. ",
+      "name_es": "Dinámico",
+      "description_es": "Amo dar vida a las páginas web; considero que los sitios no tienen por qué ser estáticos.",
       "icon": "/icons/dynamic.png"
     }
   ]
