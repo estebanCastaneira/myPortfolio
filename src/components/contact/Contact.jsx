@@ -62,7 +62,15 @@ function Contact({ lang }) {
   return (
     <div id="contact" ref={sectionContact} className="pt-32 sm:pt-24 pb-16">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
-        Conta<span className="flicker">c</span>t
+        {lang === "en" ? (
+          <>
+            Conta<span className="flicker">c</span>t
+          </>
+        ) : (
+          <>
+            Conta<span className="flicker">c</span>to
+          </>
+        )}
       </h2>
       <div className="mt-24">
         <form ref={form} onSubmit={handleSubmit} noValidate>
