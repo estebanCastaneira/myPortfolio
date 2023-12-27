@@ -98,7 +98,7 @@ function Contact({ lang }) {
                 <textarea
                   name="message"
                   placeholder={
-                    lang === "en" ? "Leave your message..." : "Su mensaje"
+                    lang === "en" ? "Leave your message..." : "Su mensaje..."
                   }
                   className="p-3 rounded-xl w-full h-64 bg-black border border-violet-800 focus:border-white"
                   value={message}
