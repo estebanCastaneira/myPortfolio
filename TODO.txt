@@ -1,8 +1,8 @@
 And remember...responsive is everything
 
 OVERALL 
-optimizar todas las img and videos x
-Ingle/Español (allá a las cansadas)
+optimizar todas las img and videos <--
+Ingle/Español (en ello)
 
 HEADER/NAVBAR
 done <--

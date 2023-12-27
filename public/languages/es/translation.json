@@ -1,5 +1,13 @@
 {
+  "helloWorld": "Hola Mundo",
   "aboutMe1": "¡Hola! 👋🏽",
   "aboutMe2": "En el año 2020, la pandemia provocó una reevaluación de mi carrera en Psicología. Opté por dar un giro y rápidamente descubrí una pasión por la Programación. Desde entonces, he dedicado tiempo al desarrollo de habilidades de programación y a la expansión de mis conocimientos. 🤓 📚",
-  "abooutMe3": "Ahora, con la exitosa conclusión de mis estudios como Jr. Full Stack Dev, mi enfoque se centra en buscar oportunidades en el campo de la tecnología de la información. Mi objetivo es aplicar los conocimientos adquiridos, contribuir a proyectos y seguir creciendo en esta área dinámica. 🔎 💻 👉🏽 🚀 💪🏽"
+  "aboutMe3": "Ahora, habiendo concluido con éxito mis estudios como Full Stack Dev Jr. , mi enfoque se centra en buscar oportunidades en el campo de la tecnología de la información. Mi objetivo es aplicar los conocimientos adquiridos, contribuir a proyectos y seguir creciendo en esta área dinámica. 🔎 💻 👉🏽 🚀 💪🏽",
+  "sendBtn": "Enviar",
+  "sending": "Enviando...",
+  "messageErr": "Su mensaje debe tener entre 50 y 200 caracteres",
+  "emailErr": "Por favor, ingrese un e-mail válido",
+  "nameErr": "Por favor, ingrese un nombre",
+  "mailFail": "Algo salió mal... Por favor, vuelva a intentar",
+  "mailSuccess": "Mensaje enviado!!! Me comunico a la brevedad!!!"
 }

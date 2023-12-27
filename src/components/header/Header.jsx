@@ -1,8 +1,9 @@
 import ContactLine from "../contactline/ContactLine"
 import Dropdown from "./Dropdown"
+import LangSwitch from "./LangSwitch"
 import scrollToSection from "../../functions/scrollToSection"
 
-function Header({ activeSection }) {
+function Header({ activeSection, setLang, lang }) {
   const handleOnClik = (section) => {
     scrollToSection(section)
   }
@@ -33,7 +34,15 @@ function Header({ activeSection }) {
                   }`}
                   onClick={() => handleOnClik("about")}
                 >
-                  Abo<span className="flicker">u</span>t
+                  {lang === "en" ? (
+                    <>
+                      Abo<span className="flicker">u</span>t
+                    </>
+                  ) : (
+                    <>
+                      Acer<span className="flicker">c</span>a De
+                    </>
+                  )}
                 </button>
               </li>
               <li className="hover:scale-90 transform transition">
@@ -53,10 +62,20 @@ function Header({ activeSection }) {
                   }`}
                   onClick={() => handleOnClik("contact")}
                 >
-                  Conta<span className="flicker">c</span>t
+                  {lang === "en" ? (
+                    <>
+                      Conta<span className="flicker">c</span>t
+                    </>
+                  ) : (
+                    <>
+                      Conta<span className="flicker">c</span>to
+                    </>
+                  )}
                 </button>
               </li>
+              <LangSwitch setLang={setLang} lang={lang} />
             </ul>
+
             <Dropdown activeSection={activeSection} />
           </div>
         </div>

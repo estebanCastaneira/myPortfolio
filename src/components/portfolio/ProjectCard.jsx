@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import isInViewPort from "../../functions/isInViewporrt"
 
-function ProjectCard({ project, isMobile }) {
+function ProjectCard({ project, isMobile, lang }) {
   const elementRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
   const [mouseEnter, setMoueseEnter] = useState(false)
@@ -53,7 +53,7 @@ function ProjectCard({ project, isMobile }) {
             {project.name.toUpperCase()}
           </h3>
           <p className="bg-black bg-opacity-80 p-2 break-words text-center">
-            {project.description}
+            {lang === "en" ? project.description_en : project.description_es}
           </p>
         </div>
 

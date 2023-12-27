@@ -3,35 +3,40 @@
     {
       "id": 1,
       "name": "Unicorn Beer E-Commerce",
-      "description": "E-commerce app developed using the MERN stack as the final project of a Coding Bootcamp",
+      "description_en": "E-commerce app developed using the MERN stack as the final project of a Coding Bootcamp",
+      "description_es": "E-commerce desarrollado utilizando el MERN stack como proyecto final del Bootcamp de Desarrollo Web",
       "image": "/img/unicornbeer.webp",
       "url": "https://unicornbeer.vercel.app/"
     },
     {
       "id": 2,
       "name": "Twitter Clone",
-      "description": "Twitter Clone project as a class excersise to practice building a full-stack web application.",
+      "description_en": "Twitter Clone project as a class excersise to practice building a Full Stack web application.",
+      "description_es": "Clon de Twitter como proyecto de clase para practicar la construcción de una aplicación web Full Stack",
       "image": "/img/twitterClone.webp",
       "url": "https://twitter-front-end-git-main-estebancastaneira.vercel.app/"
     },
     {
       "id": 3,
       "name": "Tactical App",
-      "description": "The present project scope is to practice a React-Redux-Vite application.",
+      "description_en": "The present project scope is to practice a React-Redux-Vite application.",
+      "description_es": "El alcance del presente proyecto es practicar React-Redux-Vite app.",
       "image": "/img/tacticalApp.webp",
       "url": "https://verdant-pony-7ee758.netlify.app/"
     },
     {
       "id": 4,
       "name": "TodoTS",
-      "description": "CRUD to practice ReactJS + TypeScript",
+      "description_en": "CRUD to practice ReactJS + TypeScript",
+      "description_es": "CRUD para practicar ReactJS + TypeScript",
       "image": "/img/reactts.webp",
       "url": "https://main--chipper-druid-333951.netlify.app/"
     },
     {
       "id": 5,
       "name": "Expense Checker",
-      "description": "A simple expense list to practice Tailwind CSS and some React. ",
+      "description_en": "A simple expense list to practice Tailwind CSS and some React.",
+      "description_es": "Una simple listador de expensas para practicar Tailwind CSS y React.",
       "image": "/img/expenseChecker.webp",
       "url": "https://gleaming-monstera-4f4fe8.netlify.app/"
     }

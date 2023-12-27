@@ -1,14 +1,15 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
+import Input from "./Input"
+import Notifications from "./Notifications"
 import sendEmail from "../../functions/sendEmail"
 import emailValidation from "../../functions/emailValidation"
 import scrollToSection from "../../functions/scrollToSection"
-import Input from "./Input"
-import Notifications from "./Notifications"
 
-function Contact() {
+function Contact({ lang }) {
   const sectionContact = useRef(null)
   const form = useRef(null)
-
+  const { t } = useTranslation()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
@@ -24,14 +25,13 @@ function Contact() {
     event.preventDefault()
     const validationErrors = {}
     if (message.length <= 50 || message.length >= 200) {
-      validationErrors.message =
-        "Your message should have at least 50 characters and less than 200"
+      validationErrors.message = "messageErr"
     }
     if (!emailValidation(email)) {
-      validationErrors.email = "Please, enter a valid e-mail"
+      validationErrors.email = "emailErr"
     }
     if (!name) {
-      validationErrors.name = "Please, enter a contact name"
+      validationErrors.name = "nameErr"
     }
     setFormValidation(validationErrors)
     scrollToSection("notifications")
@@ -47,19 +47,18 @@ function Contact() {
             setMessage(""),
             setIsLoading(false)
           return setFormValidation({
-            success: "Message sended!!! I'll be in touch",
+            success: "mailSuccess",
           })
         }
       } catch (error) {
         console.log(error)
         setIsLoading(false)
         return setFormValidation({
-          fail: "Something went wrong... Please, try later",
+          fail: "mailFail",
         })
       }
     }
   }
-
   return (
     <div id="contact" ref={sectionContact} className="pt-32 sm:pt-24 pb-16">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
@@ -72,21 +71,25 @@ function Contact() {
               <Input
                 type={"text"}
                 name={"name"}
-                placeholder={"Your name..."}
+                placeholder={lang === "en" ? "Your name..." : "Nombre..."}
                 value={name}
                 setValue={setName}
               />
               <Input
                 type={"email"}
                 name={"email"}
-                placeholder={"Your e-mail..."}
+                placeholder={lang === "en" ? "Your e-mail..." : "Email..."}
                 value={email}
                 setValue={setEmail}
               />
               <Input
                 type={"tel"}
                 name={"phone"}
-                placeholder={"Your phone... (optional)"}
+                placeholder={
+                  lang === "en"
+                    ? "Your phone... (optional)"
+                    : "Teléfono... (opcional)"
+                }
                 value={phone}
                 setValue={setPhone}
               />
@@ -94,7 +97,9 @@ function Contact() {
               <div className="w-full sm:w-[80%] flex flex-col justify-center gap-3">
                 <textarea
                   name="message"
-                  placeholder="Leave your message..."
+                  placeholder={
+                    lang === "en" ? "Leave your message..." : "Su mensaje"
+                  }
                   className="p-3 rounded-xl w-full h-64 bg-black border border-violet-800 focus:border-white"
                   value={message}
                   onChange={handleOnChangeTextArea}
@@ -116,7 +121,7 @@ function Contact() {
                       isLoading && "cursor-none pointer-events-none"
                     }`}
                   >
-                    {isLoading ? "Loading..." : "Send"}
+                    {!isLoading ? t("sendBtn") : t("sending")}
                   </button>
                 </div>
               </div>
@@ -124,7 +129,7 @@ function Contact() {
           </fieldset>
         </form>
       </div>
-      <Notifications formValidation={formValidation} />
+      <Notifications formValidation={formValidation} t={t} />
     </div>
   )
 }

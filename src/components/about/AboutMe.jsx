@@ -2,11 +2,13 @@ import { useRef, useEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import me from "/img/me.webp"
+import { useTranslation } from "react-i18next"
 
 gsap.registerPlugin(ScrollTrigger)
-function AboutMe() {
+function AboutMe({ lang }) {
   const textRef = useRef()
   const imgRef = useRef()
+  const { t } = useTranslation()
   useEffect(() => {
     const animateFromLeft = gsap.fromTo(
       imgRef.current,
@@ -47,7 +49,15 @@ function AboutMe() {
   return (
     <div>
       <h3 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
-        <span className="flicker">M</span>e
+        {lang === "en" ? (
+          <>
+            M<span className="flicker">e</span>
+          </>
+        ) : (
+          <>
+            M<span className="flicker">i</span>
+          </>
+        )}
       </h3>
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
         <div className="sm:w-[50%] flex justify-center">
@@ -61,19 +71,9 @@ function AboutMe() {
           />
         </div>
         <div className="sm:w-[50%] sm:text-xl" ref={textRef}>
-          <p className="mb-3">Hello, there! 👋🏽</p>
-          <p className="mb-3">
-            In 2020 the pandemic led to a reassessment of my career in
-            Psychology. Opting to move on, quickly discovered a passion for
-            Programming. Since then, time has been devoted to developing
-            programming skills and expanding knowledge. 🤓 📚
-          </p>
-          <p className="mb-3">
-            Now, with successful completion of studies as a Jr. Full Stack Dev,
-            the focus is on seeking opportunities in the IT field. The aim is to
-            apply acquired knowledge, contribute to projects, and continue
-            growing in this dynamic area. 🔎 💻 👉🏽 🚀 💪🏽
-          </p>
+          <p className="mb-3">{t("aboutMe1")}</p>
+          <p className="mb-3">{t("aboutMe2")}</p>
+          <p className="mb-3">{t("aboutMe3")}</p>
         </div>
       </div>
     </div>

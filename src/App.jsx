@@ -5,9 +5,10 @@ import About from "./components/about/About"
 import Portfolio from "./components/portfolio/Portfolio"
 import Contact from "./components/contact/Contact"
 import Footer from "./components/footer/Footer"
+import i18n from "../i18n.js"
 function App() {
   const [activeSection, setActiveSection] = useState("hero")
-
+  const [lang, setLang] = useState("en")
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "about", "portfolio", "contact"]
@@ -32,13 +33,13 @@ function App() {
   return (
     <>
       <div className="bg-gradient-to-t from-zinc-800 to-violet-950">
-        <Header activeSection={activeSection} />
+        <Header activeSection={activeSection} setLang={setLang} lang={lang} />
 
         <Hero />
         <main className="w-[80%] mx-auto">
-          <About />
-          <Portfolio />
-          <Contact />
+          <About lang={lang} />
+          <Portfolio lang={lang} />
+          <Contact lang={lang} />
         </main>
         <Footer />
       </div>

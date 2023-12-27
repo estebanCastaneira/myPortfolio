@@ -59,7 +59,7 @@
   transition: none;
 }
 .neon {
-  transition: all 0.3s ease;
+  transition: text-shadow 0.6s ease;
 }
 /*** Hero ***/
 
