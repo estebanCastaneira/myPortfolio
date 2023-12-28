@@ -87,17 +87,16 @@
 /*** Portfolio ***/
 .projectsContainer {
   position: relative;
-
   transition: transform 0.7s;
 }
 
-.projectsContainer:hover {
-  transform: translateZ(0);
-}
 .project-card {
   transition: all 700ms;
 }
-.projectsContainer:hover .project-card {
+.project-card:hover {
+  z-index: 12;
+}
+.projectsContainer:hover .project-card:hover {
   box-shadow: -10px -10px 70px 10px #4c1d95;
   border: #5b21b6;
   background-color: black;

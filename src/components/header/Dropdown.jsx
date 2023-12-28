@@ -1,7 +1,7 @@
 import LangSwitch from "./LangSwitch"
 import { useEffect, useState, useRef } from "react"
 import scrollToSection from "../../functions/scrollToSection"
-function Dropdown({ activeSection }) {
+function Dropdown({ activeSection, setLang, lang }) {
   const [isOpen, setIsOpen] = useState(false)
   const [windowW, setWindowW] = useState(window.innerWidth)
   const dropdownRef = useRef(null)
@@ -111,7 +111,7 @@ function Dropdown({ activeSection }) {
                 Conta<span className="flicker">c</span>t
               </button>
             </li>
-            <LangSwitch />
+            <LangSwitch setLang={setLang} lang={lang} />
           </ul>
         </div>
       )}

@@ -35,7 +35,7 @@ function ProjectCard({ project, isMobile, lang }) {
     <a
       className={`${
         isVisible && isMobile ? "opacity-100" : "opacity-50"
-      } "project-card relative transition-all sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 hover:z-10"`}
+      } project-card relative transition-all sm:opacity-50 sm:hover:opacity-100 sm:hover:scale-105 `}
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"

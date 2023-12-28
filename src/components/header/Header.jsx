@@ -76,7 +76,11 @@ function Header({ activeSection, setLang, lang }) {
               <LangSwitch setLang={setLang} lang={lang} />
             </ul>
 
-            <Dropdown activeSection={activeSection} />
+            <Dropdown
+              activeSection={activeSection}
+              setLang={setLang}
+              lang={lang}
+            />
           </div>
         </div>
       </nav>
