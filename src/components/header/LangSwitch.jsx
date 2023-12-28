@@ -8,8 +8,8 @@ function LangSwitch({ setLang, lang }) {
   }
 
   return (
-    <div className="flex gap-2 justify-center items-center transition transform">
-      <li className="">
+    <div className="flex gap-2 justify-center items-center ">
+      <li className="transition transform">
         <button
           className={`${
             lang === "es" ? "neonText" : "text-zinc-400"
@@ -22,7 +22,7 @@ function LangSwitch({ setLang, lang }) {
       <div>
         <span>|</span>
       </div>
-      <li>
+      <li className="transition transform">
         <button
           className={`${
             lang === "en" ? "neonText" : "text-zinc-400"

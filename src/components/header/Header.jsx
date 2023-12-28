@@ -15,7 +15,7 @@ function Header({ activeSection, setLang, lang }) {
             <h1 className="font-bold mr-10 text-lg">
               Esteban Castañeira
               <span
-                className={`sm:ml-2 font-thin block sm:inline-block  hover:scale-90 hover:cursor-pointer tracking-widest z-20 ${
+                className={`sm:ml-2 font-thin block sm:inline-block transform transition hover:scale-90 hover:cursor-pointer tracking-widest z-20 ${
                   activeSection === "hero" && "neonText"
                 }`}
                 onClick={() => handleOnClik("hero")}
