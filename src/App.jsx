@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-gradient-to-t from-zinc-800 to-violet-950">
+      <div className="bg-gradient-to-t from-zinc-800 to-violet-950 overflow-x-hidden">
         <Header activeSection={activeSection} setLang={setLang} lang={lang} />
 
         <Hero />
