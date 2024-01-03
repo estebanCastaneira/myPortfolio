@@ -12,7 +12,6 @@ function Hero() {
       className="relative flex items-center justify-center  bg-gradient-to-br from-black to-violet-950"
     >
       <video
-        autoPlay
         loop
         muted
         id="video"
