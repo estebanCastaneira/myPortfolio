@@ -77,6 +77,11 @@
 #video::-webkit-media-controls-start-playback-button {
   display: none !important;
 }
+#video {
+  /* Estilos específicos de Firefox para ocultar controles */
+  -moz-appearance: none !important;
+  pointer-events: none !important;
+}
 /*** About ***/
 .profile {
   transition: box-shadow 1s !important;
