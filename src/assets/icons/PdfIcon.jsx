@@ -1,11 +1,12 @@
 import pdf_icon from "/icons/pdf_icon.png"
 
-function PdfIcon() {
+function PdfIcon({ t }) {
   return (
     <a
       href="/files/estebancastaneiracv.pdf"
       download="estebancastaneiraresumee"
       className="inline-flex transform transition-transform hover:scale-125"
+      title={t("pdf")}
     >
       <img
         src={pdf_icon}
