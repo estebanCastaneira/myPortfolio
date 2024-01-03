@@ -40,7 +40,7 @@ function Header({ activeSection, setLang, lang }) {
                     </>
                   ) : (
                     <>
-                      Acer<span className="flicker">c</span>a De
+                      Sob<span className="flicker">r</span>e Mi
                     </>
                   )}
                 </button>

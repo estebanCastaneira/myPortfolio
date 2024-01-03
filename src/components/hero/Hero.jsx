@@ -14,6 +14,7 @@ function Hero() {
       <video
         loop
         muted
+        autoPlay
         id="video"
         className="h-screen object-cover transform md:transform-none w-full filter-video opacity-40"
         loading="lazy"

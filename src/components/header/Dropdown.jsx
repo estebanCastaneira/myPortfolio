@@ -82,7 +82,17 @@ function Dropdown({ activeSection, setLang, lang }) {
                   setIsOpen(false)
                 }}
               >
-                Abo<span className="flicker">u</span>t
+                {lang === "en" ? (
+                  <>
+                    {" "}
+                    Abo<span className="flicker">u</span>t
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    Sob<span className="flicker">r</span>e Mi
+                  </>
+                )}
               </button>
             </li>
             <li className="flex justify-center hover:brightness-105  px-4 py-1 w-full">
@@ -108,7 +118,15 @@ function Dropdown({ activeSection, setLang, lang }) {
                   setIsOpen(false)
                 }}
               >
-                Conta<span className="flicker">c</span>t
+                {lang === "en" ? (
+                  <>
+                    Conta<span className="flicker">c</span>t
+                  </>
+                ) : (
+                  <>
+                    Conta<span className="flicker">c</span>to
+                  </>
+                )}
               </button>
             </li>
             <LangSwitch setLang={setLang} lang={lang} />
