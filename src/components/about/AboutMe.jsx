@@ -48,18 +48,7 @@ function AboutMe({ lang }) {
   }, [])
   return (
     <div>
-      <h3 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
-        {lang === "en" ? (
-          <>
-            M<span className="flicker">e</span>
-          </>
-        ) : (
-          <>
-            M<span className="flicker">i</span>
-          </>
-        )}
-      </h3>
-      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-10">
+      <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-20">
         <div className="sm:w-[50%] flex justify-center">
           <img
             className="rounded-full w-[88%] profile"

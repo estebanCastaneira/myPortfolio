@@ -6,6 +6,7 @@ Ingle/Español (en ello)
 
 HEADER/NAVBAR
 done <--
+agregar values a los iconos
 
 HERO
 quizás un mejor icon for scoll
@@ -19,6 +20,7 @@ PORTFOLIO
 -DEPLOY TWITTER CLONE
 in mobile the project autoiluminates when is showed x
 the whole block should be scale no transpositions allowed
+tecnologías aplicadas
 
 CONTACT
 done <--

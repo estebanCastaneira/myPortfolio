@@ -4,11 +4,11 @@ import WebDevelopment from "./WebDevelopment"
 function About({ lang }) {
   const sectionAbout = useRef(null)
   return (
-    <div id="about" ref={sectionAbout} className="pt-32 sm:py-24">
+    <div id="about" ref={sectionAbout} className="pt-24">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         {lang === "en" ? (
           <>
-            Abo<span className="flicker">u</span>t
+            Abo<span className="flicker">u</span>t Me
           </>
         ) : (
           <>
@@ -16,8 +16,8 @@ function About({ lang }) {
           </>
         )}
       </h2>
-      <WebDevelopment lang={lang} />
       <AboutMe lang={lang} />
+      <WebDevelopment lang={lang} />
     </div>
   )
 }

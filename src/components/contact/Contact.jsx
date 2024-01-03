@@ -72,7 +72,7 @@ function Contact({ lang }) {
           </>
         )}
       </h2>
-      <div className="mt-24">
+      <div className="mt-20">
         <form ref={form} onSubmit={handleSubmit} noValidate>
           <fieldset>
             <div className="flex flex-col justify-center items-center text-xl gap-8">
