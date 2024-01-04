@@ -25,8 +25,21 @@ function ContactLine() {
       >
         <GithubIcon width={30} height={30} />
       </a>
-      <MailIcon t={t} />
-      <PdfIcon t={t} />
+      <a
+        href="mailto:estebanc_b@hotmail.com"
+        className="inline-flex transform transition-transform hover:scale-125"
+        title={t("email")}
+      >
+        <MailIcon />
+      </a>
+      <a
+        href="/files/estebancastaneiracv.pdf"
+        download="estebancastaneiraresumee"
+        className="inline-flex transform transition-transform hover:scale-125"
+        title={t("pdf")}
+      >
+        <PdfIcon />
+      </a>
     </div>
   )
 }

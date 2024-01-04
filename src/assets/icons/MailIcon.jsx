@@ -1,14 +1,6 @@
 import mail_icon from "/icons/mail_icon.png"
-function MailIcon({ t }) {
-  return (
-    <a
-      href="mailto:estebanc_b@hotmail.com"
-      className="inline-flex transform transition-transform hover:scale-125"
-      title={t("email")}
-    >
-      <img src={mail_icon} alt="mail icon" type="img/png" />
-    </a>
-  )
+function MailIcon() {
+  return <img src={mail_icon} alt="mail icon" type="img/png" />
 }
 
 export default MailIcon
