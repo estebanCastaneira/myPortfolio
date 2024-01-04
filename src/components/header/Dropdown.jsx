@@ -45,7 +45,7 @@ function Dropdown({ activeSection, setLang, lang }) {
   return (
     <div className="relative flex flex-col items-center" ref={dropdownRef}>
       <button
-        className="block active:border-white focus:border-white target:border-white duration-300 bg-transparent p-2 text-white  focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
+        className="block active:border-white focus:border-white target:border-white duration-300 bg-transparent p-2 text-white focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 sm:hidden"
         type="button"
         data-te-collapse-init
         data-te-target="#navbarSupportedContent1"
@@ -70,7 +70,7 @@ function Dropdown({ activeSection, setLang, lang }) {
         </span>
       </button>
       {isOpen && (
-        <div className="bg-zinc-800 bg-opacity-60 absolute top-12 rounded-lg border border-zinc-700 p-3 mr-4">
+        <div className=" backdrop-filter backdrop-blur-lg absolute top-12 rounded-lg border border-zinc-700 p-3 mr-4">
           <ul className="flex flex-col items-center gap-6 ">
             <li className="flex justify-center hover:brightness-105 px-4 py-1 w-full">
               <button
