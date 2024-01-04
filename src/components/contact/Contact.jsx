@@ -60,7 +60,7 @@ function Contact({ lang }) {
     }
   }
   return (
-    <div id="contact" ref={sectionContact} className="pt-32 pb-16">
+    <div id="contact" ref={sectionContact} className="pt-32 pb-6">
       <h2 className="neonText text-4xl sm:text-6xl text-center tracking-widest">
         {lang === "en" ? (
           <>

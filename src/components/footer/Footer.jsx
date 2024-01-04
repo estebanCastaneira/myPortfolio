@@ -9,9 +9,6 @@ function Footer() {
         </p>
         <div className="flex flex-col gap-2">
           <p className="font-thin text-lg">Montevideo, Uruguay 🧉 🇺🇾.</p>
-          <div className="sm:absolute sm:left-0 ">
-            <ContactLine />
-          </div>
         </div>
       </div>
     </footer>
