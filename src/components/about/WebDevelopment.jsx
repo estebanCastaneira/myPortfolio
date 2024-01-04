@@ -9,7 +9,7 @@ function WebDevelopment({ lang }) {
   }, [])
 
   return (
-    <div className="my-32 grid grid-cols-2 sm:grid-cols-4 sm:grid-flow-col gap-5">
+    <div className="mt-32 grid grid-cols-2 sm:grid-cols-4 sm:grid-flow-col gap-5">
       {webFeatures.map((feature) => (
         <WebFeature key={feature.id} feature={feature} lang={lang} />
       ))}
