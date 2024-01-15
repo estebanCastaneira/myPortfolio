@@ -1,4 +1,3 @@
-import ContactLine from "../contactline/ContactLine"
 import { useEffect, useState } from "react"
 function Footer() {
   const [year, setYear] = useState()

@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react"
 import scrollToSection from "../../functions/scrollToSection"
 function Dropdown({ activeSection, setLang, lang }) {
   const [isOpen, setIsOpen] = useState(false)
-  const [windowW, setWindowW] = useState(window.innerWidth)
+
   const dropdownRef = useRef(null)
 
   const toggleMenu = () => {
@@ -33,7 +33,7 @@ function Dropdown({ activeSection, setLang, lang }) {
       document.removeEventListener("click", closeDropdown)
       desktopMediaQuery.removeEventListener("change", resizeMatch)
     }
-  }, [windowW, isOpen])
+  }, [isOpen])
   return (
     <div className="relative flex flex-col items-center" ref={dropdownRef}>
       <button
