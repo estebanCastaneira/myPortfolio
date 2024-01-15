@@ -11,19 +11,10 @@ function Dropdown({ activeSection, setLang, lang }) {
   }
 
   useEffect(() => {
-    const updateWindowWidth = () => {
-      setWindowW(window.innerWidth)
-    }
-    const closeMenu = () => {
-      const limitWidth = 640
-
-      if (windowW <= limitWidth && isOpen) {
+    const resizeMatch = (event) => {
+      if (event.matches) {
         setIsOpen(false)
       }
-    }
-    const handleResize = () => {
-      updateWindowWidth()
-      closeMenu()
     }
     const closeDropdown = (event) => {
       if (
@@ -34,12 +25,13 @@ function Dropdown({ activeSection, setLang, lang }) {
         setIsOpen(false)
       }
     }
+    const desktopMediaQuery = window.matchMedia("(min-width: 640px)")
+    desktopMediaQuery.addEventListener("change", resizeMatch)
     document.addEventListener("click", closeDropdown)
-    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize)
       document.removeEventListener("click", closeDropdown)
+      desktopMediaQuery.removeEventListener("change", resizeMatch)
     }
   }, [windowW, isOpen])
   return (
