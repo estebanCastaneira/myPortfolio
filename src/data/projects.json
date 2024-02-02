@@ -10,6 +10,14 @@
     },
     {
       "id": 2,
+      "name": "EPL Scoreboard",
+      "description_es": "Como amante del football me propuce crear el tablero de la English Premier League (Work in progress).",
+      "description_en": "As a football lover, I proposed to recreate the English Premier League scoreboard (Work in progress).",
+      "image": "/img/epl_scoreboard.jpg",
+      "url": "https://stupendous-marigold-6e3652.netlify.app/"
+    },
+    {
+      "id": 3,
       "name": "Twitter Clone",
       "description_en": "Twitter Clone project as a class excersise to practice building a Full Stack web application.",
       "description_es": "Clon de Twitter como proyecto de clase para practicar la construcción de una aplicación web Full Stack",
@@ -17,7 +25,7 @@
       "url": "https://twitter-front-end-git-main-estebancastaneira.vercel.app/"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Tactical App",
       "description_en": "The present project scope is to practice a React-Redux-Vite application.",
       "description_es": "El alcance del presente proyecto es practicar React-Redux-Vite app.",
@@ -25,7 +33,7 @@
       "url": "https://verdant-pony-7ee758.netlify.app/"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "TodoTS",
       "description_en": "CRUD to practice ReactJS + TypeScript",
       "description_es": "CRUD para practicar ReactJS + TypeScript",
@@ -33,7 +41,7 @@
       "url": "https://main--chipper-druid-333951.netlify.app/"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Expense Checker",
       "description_en": "A simple expense list to practice Tailwind CSS and some React.",
       "description_es": "Una simple listador de expensas para practicar Tailwind CSS y React.",
