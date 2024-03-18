@@ -9,6 +9,14 @@
       "url": "https://unicornbeer.vercel.app/"
     },
     {
+      "id": 2,
+      "name": "MXA",
+      "description_en": "Landing page developed as freelancer",
+      "description_es": "Landing page desarrollada como freelancer",
+      "image": "/img/mxa.webp",
+      "url": "https://mxa.com.uy"
+    },
+    {
       "id": 3,
       "name": "Twitter Clone",
       "description_en": "Twitter Clone project as a class excersise to practice building a Full Stack web application.",
