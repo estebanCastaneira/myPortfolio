@@ -47,7 +47,7 @@ function AboutMe({ lang }) {
     }
   }, [])
   return (
-    <div>
+    <>
       <div className="flex flex-col sm:flex-row gap-10 justify-center items-center mt-20">
         <div className="sm:w-[50%] flex justify-center">
           <img
@@ -59,13 +59,13 @@ function AboutMe({ lang }) {
             loading="lazy"
           />
         </div>
-        <div className="sm:w-[50%] sm:text-xl" ref={textRef}>
+        <div className="sm:w-[50%] sm:text-xl aboutMe" ref={textRef}>
           <p className="mb-3">{t("aboutMe1")}</p>
           <p className="mb-3">{t("aboutMe2")}</p>
           <p className="mb-3">{t("aboutMe3")}</p>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
